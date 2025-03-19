@@ -4,12 +4,12 @@ const Header = () => {
     console.log('Header component rendered')    
 
     return (
-    <nav className="bg-gray-800 text-white p-4">
+    <nav className="bg-gray-900 text-white p-4 no-underlin w-200">
         <ul className="flex space-x-6">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/">About</Link></li>
-            <li><Link to="/">Projects</Link></li>
-            <li><Link to="/">Contact</Link></li>
+        <li><Link to="/" className="text-white no-underline">Home</Link></li>
+                <li><Link to="/" className="text-white no-underline">About</Link></li>
+                <li><Link to="/" className="text-white no-underline">Projects</Link></li>
+                <li><Link to="/" className="text-white no-underline">Contact</Link></li>
         </ul>
     </nav>
     )
