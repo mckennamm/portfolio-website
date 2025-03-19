@@ -4,7 +4,7 @@ const Header = () => {
     console.log('Header component rendered')    
 
     return (
-    <nav className="bg-sky-100 text-black p-4 no-underlin w-200 font-alice ">
+    <nav className="bg-sky-100 text-black mt-0 p-4 no-underlin w-screen font-alice ">
         <ul className="flex space-x-6">
         <li><Link to="/" className="text-black no-underline">Home</Link></li>
                 <li><Link to="/" className="text-black no-underline font-Alice">About</Link></li>

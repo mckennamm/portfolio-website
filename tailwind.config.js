@@ -1,11 +1,14 @@
 module.exports = {
-  content: ["./src/**/*.{html,js,jsx}"],  // Include all .jsx and .js files inside the src folder
+  content: [
+    "./src/**/*.{html,js,jsx}",  // Ensure this covers all your JSX files and HTML
+  ],
   theme: {
     extend: {
       fontFamily: {
-        'megrim': ['Megrim', 'cursive'],  // Add fallback cursive
-        'alice': ['Alice', 'serif'],      // Add fallback serif
+        'megrim': ['Megrim', 'cursive'],
+        'alice': ['Alice', 'serif'],
       },
+      
     },
   },
   plugins: [],
