@@ -15,14 +15,9 @@ const Hero = () => {
         />
       
       {/* Headline */}
-      <h1 className="hero-title">Hi, I'm Molly!</h1>
-
-      {/* Short Intro */}
-      <p className="hero-subtitle">
-        I am a passionate front-end developer creating user-friendly websites.
-      </p>
-
-      {/* Detailed Bio */}
+      <h1 className="hero-title">Welcome!</h1>
+    <div className="description-container"> 
+      {/* Short Description */}
       <p className="hero-description">
         A passionate web designer with a love for creating beautiful, functional
         online experiences. With a background in Wilderness & Outdoor Therapy
@@ -32,7 +27,7 @@ const Hero = () => {
         art, or dreaming about my future farm. Let’s build something amazing
         together!
       </p>
-
+      </div>
       {/* Button */}
      <a href="#projects" className="hero-button">Explore My Work</a>
      </div> 
