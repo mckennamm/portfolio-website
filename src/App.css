@@ -1,60 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Alice&family=Megrim&display=swap');
-@import "tailwindcss";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@theme {
-  --color-background: #c5c8be;
-  --color-contrast: #3e4430;
-  --color-button: #566917;
-}
-
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  /* padding: 2rem; */
+.App {
   text-align: center;
-  font-family: 'Alice', sans-serif;
+  padding: 20px;
 }
 
-/* .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-} */
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header {
+  background-color: #fff;
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.navbar {
+  display: flex;
+  justify-content: space-around;
 }
 
-.img {
-  max-width: 100%;
-  height: auto;
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
+/* Other specific styles for App */

@@ -1,0 +1,92 @@
+
+
+/*Global Variables*/
+:root {
+    --primary-color: #656d53;
+    --accent-color: #e67e22;
+    --font-family-heading: 'Megrim', serif;
+    --font-family-body: 'Alice', serif;
+    --button-color: #e67e22;
+  }
+  
+/* Navbar Styles */
+
+
+.navbar {
+    position: fixed; /* Fixed to the left */
+    top: 0;
+    left: 0;
+    width: 135px; /* Set the navbar width */
+    height: 135%; /* Full height */
+    background-color: #434837;
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navbar__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; /* Horizontal space distribution */
+    height: 50%;
+  }
+  
+  .navbar__item {
+    margin-bottom: 20px;
+  }
+  
+  .navbar__item a {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .navbar ul {
+    list-style-type: none;
+    font-family: 'Alice', sans-serif; 
+    padding: 0;
+    align-items: right;
+  } 
+  
+  .navbar__item a:hover {
+    color: var(--accent-color);
+  }
+  
+    .content {
+        margin-left: 150px; /* Adjust the margin to the left */
+    }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .header {
+      padding: 10px 20px;
+    }
+  
+    .header__logo {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .header__business-name {
+      font-size: 1.5rem;
+    }
+  
+    .navbar {
+      width: 100%;
+      position: static;
+      flex-direction: row;
+      justify-content: center;
+      padding-top: 0;
+      margin-top: 20px;
+    }
+  
+    .navbar__item {
+      margin-right: 20px;
+    }
+  
+    .content {
+      margin-left: 0;
+    }
+  }
+  

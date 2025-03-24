@@ -1,18 +1,29 @@
 import { Link } from 'react-router-dom'
 
+import './Header.css'   
+
+import logo from '../assets/studio-molly-logo.png'
+
 const Header = () => {
-    console.log('Header component rendered')    
-
     return (
-    <nav className="bg-sky-100 text-black mt-0 p-4 no-underlin w-screen font-alice ">
-        <ul className="flex space-x-6">
-        <li><Link to="/" className="text-black no-underline">Home</Link></li>
-                <li><Link to="/" className="text-black no-underline font-Alice">About</Link></li>
-                <li><Link to="/projects" className="text-black no-underline">Projects</Link></li>
-                <li><Link to="/contact" className="text-black no-underline">Contact</Link></li>
+        <nav className="navbar">
+        <ul className="navbar__list">
+            
+          <li className="navbar__item">
+            <Link to="/home">Home</Link> 
+          </li>
+          <li className="navbar__item">
+            <Link to="/about">About</Link> 
+          </li> 
+          <li className="navbar__item">
+            <Link to="/projects">Projects</Link>
+          </li>
+          <li className="navbar__item">
+            <Link to="/contact">Contact</Link>
+          </li>
         </ul>
-    </nav>
-    )
-}
-
-export default Header
+      </nav>
+    );
+  };
+  
+  export default Header;
