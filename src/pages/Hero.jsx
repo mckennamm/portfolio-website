@@ -7,21 +7,23 @@ const Hero = () => {
 
   return (
     <section className="hero">
+      <div className="overlay">
         <img
           src={logo}
           alt="Homepage"
           className="hero-logo"
         />
+      
       {/* Headline */}
-      <h1 className="hero_title">Hi, I'm Molly!</h1>
+      <h1 className="hero-title">Hi, I'm Molly!</h1>
 
       {/* Short Intro */}
-      <p className="hero_subtitle">
+      <p className="hero-subtitle">
         I am a passionate front-end developer creating user-friendly websites.
       </p>
 
       {/* Detailed Bio */}
-      <p className="hero_description">
+      <p className="hero-description">
         A passionate web designer with a love for creating beautiful, functional
         online experiences. With a background in Wilderness & Outdoor Therapy
         and Psychology, I blend creativity with empathy to craft websites that
@@ -32,7 +34,8 @@ const Hero = () => {
       </p>
 
       {/* Button */}
-     <a href="#projects" className="hero_button">Explore My Work</a>
+     <a href="#projects" className="hero-button">Explore My Work</a>
+     </div> 
     </section>
   );
 };

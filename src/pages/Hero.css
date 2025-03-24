@@ -1,7 +1,7 @@
 
   /* Hero Section Styles */
   .hero {
-    background-image: url('https://images.unsplash.com/photo-1505820013142-f86a3439c5b2?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D');
+    background-image: url(https://plus.unsplash.com/premium_photo-1674630069141-d19e75511856?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dHJlZSUyMHN0dW1wfGVufDB8fDB8fHww);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -10,16 +10,24 @@
     align-items: center;
     height: 100vh;
     text-align: center;
-    color: #fff;
     width: 100%;  
+    margin-left: 125px;
+
   }
+
+  .overlay {
+    background-color: rgba(18, 30, 26, 0.776);
+    width: 100%;
+    height: 100vh; 
+  }
+
 .hero-logo {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     margin-bottom: 1rem;
 }
   
-  .hero__title {
+  .hero-title {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     letter-spacing: 2px;
@@ -28,22 +36,25 @@
     font-family: 'Megrim', sans-serif;
   }
   
-  .hero__subtitle {
+  .hero-subtitle {
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
-    color: #f39c12; /* Accent color for the subtitle */
+    color: #fff; /* Accent color for the subtitle */
     font-family: 'Alice', sans-serif;
   }
   
-  .hero__description {
+  .hero-description {
+
     font-size: 1.1rem;
     margin-bottom: 2rem;
-    line-height: 1.6;
+    line-height: 1.3;
     color: white;
-    font-family: 'Mono', sans-serif;
+    font-family: 'Alice', sans-serif;
+    width: 50%;
+    max-width: 600px;
   }
   
-  .hero__button {
+  .hero-button {
     display: inline-block;
     background-color: var(--button-color);
     color: white;
@@ -52,15 +63,11 @@
     border-radius: 30px;
     font-weight: bold;
     text-transform: uppercase;
+    font-family: 'Alice', sans-serif; 
+    text-decoration: none ;
     transition: background-color 0.3s ease;
     transform: 0.3s ease;
-    font-family: 'Megrim', sans-serif;
 
-  }
-  
-  .hero__button:hover {
-    background-color: var(--button-hover-color);
-    transform: scale(1.05);
   }
   
   /* Responsive adjustments */
