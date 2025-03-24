@@ -1,4 +1,4 @@
-import faq from '../assets/faq.png'
+
 import homepage from '../assets/home-page.png'
 import login from '../assets/login.png'
 
