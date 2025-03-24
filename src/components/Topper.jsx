@@ -12,7 +12,7 @@ const Topper = () => {
         <img
           src={logo}
           alt="Topper"
-          className="hero-logo"
+          className="topper-logo"
         />
     </div>
     </section>

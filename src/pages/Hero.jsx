@@ -7,16 +7,19 @@ const Hero = () => {
 
   return (
     <section className="hero">
-      <div className="overlay">
+      <div className="hero-image">
+        <div className="hero-image-overlay">
         <img
           src={logo}
           alt="Homepage"
           className="hero-logo"
         />
-      
-      {/* Headline */}
+        </div>
+      </div>
+       
+  
+       {/* Headline */}
       <h1 className="hero-title">Welcome!</h1>
-    <div className="description-container"> 
       {/* Short Description */}
       <p className="hero-description">
         A passionate web designer with a love for creating beautiful, functional
@@ -27,10 +30,9 @@ const Hero = () => {
         art, or dreaming about my future farm. Let’s build something amazing
         together!
       </p>
-      </div>
       {/* Button */}
      <a href="#projects" className="hero-button">Explore My Work</a>
-     </div> 
+    
     </section>
   );
 };
