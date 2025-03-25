@@ -19,7 +19,7 @@ html, body {
     align-items: center;
     height: 30vh;
     text-align: center;
-    width: calc(100% - 100px); /* Subtract the width of the navbar */
+    width: 100%;
     margin-left: 150px; /* Match navbar width */
 
     z-index: 0;

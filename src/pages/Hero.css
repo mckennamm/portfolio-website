@@ -13,8 +13,13 @@
   position: relative;
   z-index: 1;
   overflow: hidden;
-  background-color: #f4f4f4; 
+  background-color: #a8b89e; 
   margin-left: 150px; /* Center the hero section */
+  border: 1px solid #434837; /* Deep earthy green */
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  font-family: 'Alice', sans-serif;
+  
 }
 
 /* Title Styles */

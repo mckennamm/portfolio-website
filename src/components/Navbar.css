@@ -16,7 +16,7 @@
     position: fixed; /* Fixed to the left */
     top: 0;
     left: 0;
-    width: 150px; /* Set the navbar width */
+    width: 200px; /* Set the navbar width */
     height: 100vh; /* Full height */
     background-color: #434837;
     color: white;
