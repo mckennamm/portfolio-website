@@ -1,13 +1,38 @@
 
 .blog {
-    height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #f9f6e8; /* Soft off-white background for a light, airy feel */
+    margin-left: 155px; /* Match navbar width */
+    width: 100%;
+    padding: 5rem 2rem; /* Add extra padding for breathing space */
+    box-sizing: border-box;
+    font-family: 'Alice', sans-serif; /* Modern playful font */
+
 }
 
 .blog-title {
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 1rem;
+    font-family: 'Megrim', cursive; /* Playful font for the title */
+    color: #434837;
+}
+
+.blog-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #434837; /* Playful orange to make the title pop */
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: 'Alice', sans-serif; /* Modern playful font */
+    width: 80%;
+}
+
+.blog-iframe {
+    height: 100vh;
+    border: none;
+    margin-top: 2rem;
 }
