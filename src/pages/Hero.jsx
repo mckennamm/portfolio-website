@@ -14,7 +14,7 @@ const Hero = () => {
       <p className="hero-description">
         At Studio Molly, we're crafting design with heart and soul. <br/> Let's bring your vision to life.
       </p>
-      <a href="/projects" className="hero-button">See My Work</a>
+      <a href="https://www.studiomolly.co/projects" className="hero-button">See My Work</a>
     </section>
   );
 };
