@@ -5,7 +5,7 @@
   padding: 2rem 1rem;
   text-align: center;
   width: 100%; /* Ensure the footer spans the full width */
-  margin-left: 150px; /* Center the footer */
+  margin-left: 140px; /* Center the footer */
   position: relative; /* Allow natural positioning in the document flow */
   z-index: 11; /* Ensure it appears above other content */
   

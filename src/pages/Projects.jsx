@@ -1,7 +1,7 @@
 import React from "react";
 import "./Projects.css";
 import homepage from "../assets/home-page.png";
-import screenshot from '../assets/portfolio-screenshot.png';
+import screenshot from '../assets/portfolio-screenshot2.png';
 import comingSoon from '../assets/coming-soon.svg';
 
 const Projects = () => {

@@ -10,9 +10,9 @@ const Hero = () => {
           <img src={heroImage} alt="Logo" className="hero-logo" />
         </div>
       </div> */}
-      <h1 className="hero-title">Welcome to Studio Molly</h1>
+      <h1 className="hero-title">Welcome!</h1>
       <p className="hero-description">
-        Crafting design with heart and soul. Let's bring your vision to life.
+        At Studio Molly, we're crafting design with heart and soul. <br/> Let's bring your vision to life.
       </p>
       <a href="/projects" className="hero-button">See My Work</a>
     </section>

@@ -8,7 +8,7 @@ const Footer = () => {
 
         <div className="footer-contact">
           <h3>Contact Me</h3>
-          <p>Email: <a href="mailto:molly.mckenna88@gmail.com">contact me here!</a></p>
+          <p>Email: <a href="mailto:studiomolly.webdesign@gmail.com">studiomolly.webdesign@gmail.com!</a></p>
           <p>Instagram: <a href="https://instagram.com/studio.molly" target="_blank" rel="noopener noreferrer">@studio.molly.designs</a></p>
         </div>
 
