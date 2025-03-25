@@ -6,7 +6,7 @@
   flex-direction: column;
   text-align: center;
   width: 100%;
-  height: 100vh; /* Full height of the viewport */
+  height: 50vh; /* Full height of the viewport */
   min-height: 100vh;
   padding: 4rem 1rem;
   box-sizing: border-box;

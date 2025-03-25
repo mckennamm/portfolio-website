@@ -17,7 +17,7 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 35vh;
+    height: 40vh;
     text-align: center;
     width: 100%;
     margin-left: 150px; /* Match navbar width */
