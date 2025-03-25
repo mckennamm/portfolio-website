@@ -3,6 +3,7 @@ import "./Projects.css";
 import homepage from "../assets/home-page.png";
 import login from "../assets/login.png";
 import screenshot from '../assets/portfolio-screenshot.png';
+import bardchirp from '../assets/dnd.png';
 
 const Projects = () => {
   console.log("Projects component rendered");
@@ -14,7 +15,7 @@ const Projects = () => {
       description:
         "A personal portfolio website built to showcase web development skills, projects, and creative work. Designed to demonstrate my abilities in front-end development with clean, modern design and responsive features.",
       link: "https://github.com/mollymckenna/portfolio-website",
-        link: "www.studiomolly.co",
+        website: "www.studiomolly.co",
       image: screenshot,
     },
     {
@@ -23,16 +24,16 @@ const Projects = () => {
       description:
         "A social platform built for a Dungeons & Dragons group, designed to allow players to share thoughts, updates, and keep in touch. This project combines my passion for D&D with my web development skills, featuring a user-friendly interface and real-time updates.",
       link: "https://github.com/mckennamm/BardChirp",
-      link: "www.bardchirp.com",
-      image: login,
+      website: "www.bardchirp.com",
+      image: bardchirp,
     },
     {
       id: 3,
       title: "Wedding Website 💍",
       description:
         "A personalized and interactive wedding website showcasing event details, linking to external RSVP, and a timeline of our love story. Built using React.js and Firebase for real-time data handling and authentication.",
-      link: "https://github.com/mckennamm/portfolio-website",
-      link: "www.cameronandmolly.com",
+      link: "https://github.com/mckennamm/wedding-website2.0",
+      website: "www.cameronandmolly.com",
       image: homepage,
     },
   ];
@@ -56,7 +57,15 @@ const Projects = () => {
               rel="noopener noreferrer"
               className="project-link"
             >
-              View Project
+              View GitHub
+            </a>
+            <a
+              href={project.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-website"
+            >
+              View Website
             </a>
           </div>
         ))}
