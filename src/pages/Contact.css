@@ -1,0 +1,93 @@
+.contact-section {
+    padding: 2rem;
+    background-color: #434837;
+    border: 1px solid #000;
+    width: calc(100% - 100px); /* Subtract the width of the navbar */
+    margin-left: 155px; /* Match navbar width */
+}
+
+.contact-heading {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #fff;
+    font-family: 'Alice', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 300;
+    text-shadow: 1px 1px 2px #000;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #5d6a4a; /* Softer green */
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #5d6a4a; /* Softer green */
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+
+}
+
+.contact-form {
+    max-width: 40rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    color: #fff;
+    font-family: 'Alice', sans-serif;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+}
+
+.message-box {
+    height: 150px;
+    resize: vertical;
+}
+
+.contact-button {
+    width: 50%;
+    margin: 0 auto;
+    background-color: #5d6a4a; /* Softer green */
+    border: none;
+    
+    background-color: #d4d4d4;
+    padding: 0.75rem;
+    border-radius: 9999px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: #434837;
+    font-family: 'Alice', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+
+}
+
+.contact-button:hover {
+    background-color: #c1c1c1;
+}

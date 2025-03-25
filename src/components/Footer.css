@@ -1,68 +1,113 @@
 /* Footer Styles */
 .footer {
-    background-color: #434837; /* Deep earthy green */
-    color: #fff;
-    height: 200px;
-    width: 100%;
-    text-align: center;
-    margin-left: 155px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
+  background-color: #434837; /* Deep earthy green */
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+  width: 100%; /* Ensure the footer spans the full width */
+  margin-left: 150px; /* Center the footer */
+  position: relative; /* Allow natural positioning in the document flow */
+  z-index: 11; /* Ensure it appears above other content */
+  
+}
 
+.thank-you-message {
+  font-size: 1.5rem;
+  font-family: 'Megrim', sans-serif;
+  margin-bottom: 2rem;
+  color: #f5f5f5; /* Light color for contrast */
+  text-align: center;
+}
+
+/* Container for all footer content */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  height: 200px; /* Adjust height as needed */
+  width: auto; /* Maintain aspect ratio */
+}
+
+/* Contact and Links section */
+.footer-contact,
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+/* Heading Styles */
+.footer-contact h3,
+.footer-links h3 {
+  font-size: 1.75rem;
+  font-family: 'Megrim', sans-serif;
+  margin-bottom: 1rem;
+  color: #f5f5f5;
+}
+
+/* Contact and Link Text */
+.footer-contact p,
+.footer-links a {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #dcdcdc;
+  font-family: 'Alice', sans-serif;
+  text-decoration: none;
+}
+
+/* Link Colors */
+.footer-contact a,
+.footer-link {
+  color: #b2c0a1; /* Softer green */
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-contact a:hover,
+.footer-link:hover {
+  color: #f5f5f5;
+  text-decoration: underline;
+  transform: translateY(-2px);
+}
+
+/* Footer Bottom Styles */
+.footer-bottom {
+  width: 100%;
+  font-size: 0.9rem;
+  color: #dcdcdc;
+  font-family: 'Alice', sans-serif;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #5d6a4a; /* Softer divider */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+    padding: 2rem 1rem;
   }
-  
+
   .footer-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    width: 100%;
-    margin-left: 155px;
-  }
-  
-  .footer-contact,
-  .footer-links {
-    margin-bottom: 1rem;
-    display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+  }
 
+  .footer-contact,
+  .footer-links {
+    align-items: center;
   }
-  
-  .footer-contact h3,
-  .footer-links h3 {
-    font-size: 1.5rem;
 
-    font-family: 'Megrim', sans-serif;
-  }
-  
-  .footer-contact p,
-  .footer-links a {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #dcdcdc;
-    font-family: 'Alice', sans-serif;
-    text-decoration: none;
-  }
-  
-  .footer-contact a,
-  .footer-link {
-    color: #b2c0a1; /* Softer green */
-    transition: color 0.3s ease;
-  }
-  
-  .footer-contact a:hover,
-  .footer-link:hover {
-    color: #f5f5f5;
-    text-decoration: underline;
-  }
-  
-  /* Footer Bottom Styles */
   .footer-bottom {
-    font-size: 0.9rem;
-    color: #000;
-    font-family: 'Alice', sans-serif;
+    text-align: center; /* Center the text */
+    display: flex;
+    justify-content: center;
   }
-  
+}

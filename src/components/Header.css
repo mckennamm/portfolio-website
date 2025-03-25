@@ -1,94 +1,38 @@
+/* Reset default margins and padding */
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
 
 
-/*Global Variables*/
-:root {
-    --primary-color: #656d53;
-    --accent-color: #e67e22;
-    --font-family-heading: 'Megrim', serif;
-    --font-family-body: 'Alice', serif;
-    --button-color: #e67e22;
-  }
-  
-/* Navbar Styles */
-
-
-.navbar {
-    position: fixed; /* Fixed to the left */
+.header {
+    background-image: url(https://plus.unsplash.com/premium_photo-1674630069141-d19e75511856?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dHJlZSUyMHN0dW1wfGVufDB8fDB8fHww);
+    background-size: cover;
+    background-position: center;
     top: 0;
     left: 0;
-    width: 150px; /* Set the navbar width */
-    height: 100vh; /* Full height */
-    background-color: #434837;
-    color: white;
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-    z-index: 10;
-  }
-  
-  .navbar__list {
     display: flex;
     flex-direction: column;
-    justify-content: space-around; /* Horizontal space distribution */
-    height: 50%;
-  }
-  
-  .navbar__item {
-    margin-bottom: 20px;
-  }
-  
-  .navbar__item a {
-    color: white;
-    font-size: 1.2rem;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    text-align: center;
+    width: calc(100% - 100px); /* Subtract the width of the navbar */
+    margin-left: 150px; /* Match navbar width */
 
-  .navbar ul {
-    list-style-type: none;
-    font-family: 'Alice', sans-serif; 
-    padding: 0;
-    align-items: right;
+    z-index: 0;
   } 
   
-  .navbar__item a:hover {
-    color: var(--accent-color);
-  }
-  
-    .content {
-        margin-left: 150px; /* Adjust the margin to the left */
-    }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .header {
-      padding: 10px 20px;
-    }
-  
-    .header__logo {
-      width: 40px;
-      height: 40px;
-    }
-  
-    .header__business-name {
-      font-size: 1.5rem;
-    }
-  
-    .navbar {
+  .overlay {
+    background-color: rgba(28, 41, 32, 0.5);
       width: 100%;
-      position: static;
-      flex-direction: row;
-      justify-content: center;
-      padding-top: 0;
-      margin-top: 20px;
-    }
-  
-    .navbar__item {
-      margin-right: 20px;
-    }
-  
-    .content {
-      margin-left: 0;
-    }
+      height: 100%; 
   }
   
+  
+  .header-logo {
+    width: 300px;
+    height: 300px;
+  }

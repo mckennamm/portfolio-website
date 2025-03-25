@@ -1,73 +1,44 @@
 /* Hero Section Styles */
 .hero {
-  height: 100vh; /* Take up 60% of the screen height for the hero image */
-  
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
-  width: calc(100% - 150px); /* Subtract the width of the navbar */
-
-  margin-left: 150px; 
-  z-index: 1; /* Make sure the hero content stays above the overlay */
-}
-
-/* Overlay Styles */
-.hero-image {
-  background-image: url(https://plus.unsplash.com/premium_photo-1674630069141-d19e75511856?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dHJlZSUyMHN0dW1wfGVufDB8fDB8fHww);
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 30%; /* Take up 40% of the screen height for the overlay */
-  z-index: 0; /* Make sure the overlay stays behind the logo */
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  margin-left: 150px; /* Match navbar width */
-
+  height: 100vh; /* Full height of the viewport */
+  min-height: 100vh;
+  padding: 4rem 1rem;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background-color: #f4f4f4; 
+  margin-left: 150px; /* Center the hero section */
 }
-
-.hero-image-overlay {
-  background-color: rgba(28, 41, 32, 0.5);
-  width: 100%;
-  height: 100%;
-  z-index: 0; /* Make sure the overlay stays behind the logo */ 
-}
-
-.hero-logo {
-  width: 200px;
-  height:200px;
-  z-index: 1; /* Ensure the logo is above the overlay */;
-}
-
 
 /* Title Styles */
 .hero-title {
   font-size: 2.5rem;
   letter-spacing: 2px;
   text-transform: uppercase;
-  /* color: #434837;  */
   color: #434837;
   font-family: 'Megrim', sans-serif;
-  margin-top: 50vh;
-  z-index: 1; /* Ensure the title is above the overlay */
+  /* margin-top: 2rem; */
+  margin-bottom: 1rem;
+  z-index: 1;
 }
 
 /* Description Text Styles */
 .hero-description {
   font-size: 1.1rem;
-  line-height: 1.3;
-  color: #434837; 
+  line-height: 1.6;
+  color: #434837;
   font-family: 'Alice', sans-serif;
   text-align: center;
-  width: 40%;
-  z-index: 1; /* Ensure the description is above the overlay */
+  max-width: 700px;
+  /* margin: 0 auto 2rem; */
+  z-index: 1;
 }
 
 /* Button Styles */
@@ -78,35 +49,60 @@
   font-size: 1.2rem;
   padding: 1rem 2rem;
   margin-bottom: 2rem;
-
   border-radius: 30px;
   font-weight: bold;
   text-transform: uppercase;
   font-family: 'Alice', sans-serif;
   text-decoration: none;
-  transition: background-color 0.3s ease;
-  transform: 0.3s ease;
-  z-index: 1; /* Ensure the button is above the overlay */
-
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 1;
 }
+
+.hero-button:hover {
+  background-color: #5a6c4f;
+  transform: translateY(-3px);
+}
+
+/* Logo Styles */
+/* .hero-logo {
+  width: 120px;
+  height: auto;
+} */
+
+/* Hero Image Container */
+/* .hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  z-index: -1;
+} */
+
+/* .hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  opacity: 0.7; 
+} */
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .hero-logo {
-    width: 100px;
-    height: 100px;
-  }
-
   .hero-title {
     font-size: 2rem;
   }
 
   .hero-description {
     font-size: 1rem;
+    width: 90%;
   }
 
   .hero-button {
     font-size: 1rem;
     padding: 0.8rem 1.6rem;
+  }
+
+  .hero-logo {
+    width: 100px;
   }
 }

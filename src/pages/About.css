@@ -8,6 +8,7 @@
     z-index: 1000;
     margin-left: 155px; /* Match navbar width */   
     width: calc(100% - 100px); 
+    margin-bottom: 500px;
 }
 
 .about-image {

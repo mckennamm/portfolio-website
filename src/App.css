@@ -3,10 +3,14 @@
 
 }
 
-.header {
-  background-color: #fff;
+header, footer {
+  position: relative; /* Ensure they are in the flow of the document */
+  z-index: 1; /* Keeps them in front of hero */
 }
 
+.hero {
+  margin-top: 0; /* Reset any margin on Hero if it's pushed by other components */
+}
 .navbar {
   display: flex;
   justify-content: space-around;

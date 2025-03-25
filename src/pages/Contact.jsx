@@ -1,23 +1,23 @@
-
+import './Contact.css'
 
 const Contact = () => {
     return (
-        <section className="p-8">
-            <h2 className="text-3xl font-semibold text-center  mb-8">Contact Me</h2>
-            <form action="#" className="max-w-xl mx-auto space-y-6">
-                <div>
-                    <label htmlFor="name" className="block text-lg">Name</label>
-                    <input type="text" id="name" className="w-full p-3 mt-2 border rounded" />
+        <section className="contact-section">
+            <h2 className="contact-heading">Contact Me</h2>
+            <form action="#" className="contact-form">
+                <div className="form-group">
+                    <label htmlFor="name" className="form-label">Name</label>
+                    <input type="text" id="name" className="form-input" />
                 </div>
-                <div>
-                    <label htmlFor="email" className="block text-lg">Email</label>
-                    <input type="email" id="email" className="w-full p-3 mt-2 border rounded" />
+                <div className="form-group">
+                    <label htmlFor="email" className="form-label">Email</label>
+                    <input type="email" id="email" className="form-input" />
                 </div>
-                <div>
-                    <label htmlFor="message" className="block text-lg">Message</label>
-                    <textarea id="message" className="w-full p-3 mt-2 border rounded"></textarea>
+                <div className="form-group">
+                    <label htmlFor="message" className="form-label">Message</label>
+                    <textarea id="message" className="form-input message-box"></textarea>
                 </div>
-                <button type="submit" className="w-full bg-neutral-300 py-3 rounded-full">Send Message</button>
+                <button type="submit" className="contact-button">Send Message</button>
             </form>
         </section>
     )
