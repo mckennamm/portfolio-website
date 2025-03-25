@@ -5,10 +5,13 @@ import molly from '../assets/molly2.jpeg';
 const About = () => {   
     return (
         <div className="about">
+            <a href="https://www.instagram.com/studio.molly.designs/">
             <img src={molly} alt="Molly" className="about-image"/>
+            </a>
+
             <h2 className="about-title">About Me</h2>
-            <p className="about-text">Hey! I'm Molly, a web developer who loves to create beautiful and functional websites. I have experience with HTML, CSS, JavaScript, React, and Node.js. I am excited to continue learning and growing as a developer.</p>
-            <p className="about-text">In my free time, I enjoy hiking, reading, and spending time with my dog. I am always looking for new challenges and opportunities to expand my skills.</p>
+            <p className="about-title-text">Hey! I'm Molly, a web developer who loves to create beautiful and functional websites. I have experience with HTML, CSS, JavaScript, React, and Node.js. I am excited to continue learning and growing as a developer.</p>
+            
 
             <h3 className="about-subtitle">My Journey</h3>
             <p className="about-text">I started my journey in web development a few years ago when I decided to take a coding bootcamp. Since then, I have been working on various projects and continuously learning new technologies.</p>
@@ -39,21 +42,14 @@ const About = () => {
             <p className="about-text">If you are looking for a passionate and dedicated web developer to join your team, please feel free to reach out to me. I would love to hear from you!</p>
             <p className="about-text">Thank you for taking the time to read my about me page. I hope to connect with you soon!</p>
 
-            <h3 className="about-subtitle">Fun Facts!</h3>
+
             <ul className="about-facts">
-                <li>I love hiking and exploring the outdoors.</li>
-                <li>I am a huge fan of sci-fi movies and books.</li>
-                <li>I have two cats named Ducky and Cosmo who are my best friends.</li>
-                <li>I enjoy cooking and trying out new recipes.</li>
-                <li>I am a coffee enthusiast and love trying out different coffee shops.</li>
-                <li>I have a passion for photography and love capturing moments.</li>
-                <li>I enjoy traveling and exploring new places.</li>
-                <li>I enjoy learning new languages. I've taken years of Japanese language lessons, French lessons, and some Italian.</li>
-                <li>I am a big fan of board games and love playing with friends.</li>
-                <li>I enjoy listening to music and discovering new artists.</li>
-                <li>I love learning new things and expanding my knowledge.</li>
-                <li>I am a huge fan of animals and love spending time with them.</li>
-                <li>I enjoy painting and creating art in my free time.</li>
+            <h3 className="about-subtitle">Fun Facts!</h3>
+                <li>I have two gray cats named Ducky and Cosmo.</li>
+                <li>I love photography and capturing moments.</li>
+                <li>I enjoy learning new languages.</li>
+                <li>I enjoy listening to music.</li>
+                <li>I paint and create art.</li>
                 <li>I love spending time with my family and friends.</li>
                 <li>I am a big fan of puzzles and enjoy solving them.</li>
             </ul>

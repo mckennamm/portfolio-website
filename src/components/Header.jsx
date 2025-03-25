@@ -1,6 +1,6 @@
 
 
-import logo from "../assets/studio-molly-logo-light.png";
+import logo from "../assets/studio-molly.svg";
 import './Header.css';
 
 const Topper = () => {
