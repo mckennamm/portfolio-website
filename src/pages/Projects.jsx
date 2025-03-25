@@ -14,6 +14,7 @@ const Projects = () => {
       description:
         "A personal portfolio website built to showcase web development skills, projects, and creative work. Designed to demonstrate my abilities in front-end development with clean, modern design and responsive features.",
       link: "https://github.com/mckennamm/portfolio-website",
+      website: "https://www.studiomolly.co/",
       image: screenshot,
     },
     {
