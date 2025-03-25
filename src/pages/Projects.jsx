@@ -23,7 +23,7 @@ const Projects = () => {
       description:
         "A social platform built for a Dungeons & Dragons group, designed to allow players to share thoughts, updates, and keep in touch. This project combines my passion for D&D with my web development skills, featuring a user-friendly interface and real-time updates.",
       link: "https://github.com/mckennamm/BardChirp",
-      website: "www.bardchirp.com",
+      website: "https://bardchirp.com/",
       image: comingSoon,
     },
     {
