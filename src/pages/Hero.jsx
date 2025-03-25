@@ -1,6 +1,7 @@
 // Hero.jsx
 import './Hero.css';
 import heroImage from '../assets/studio-molly-logo-light.png'; // Ensure you have a hero image in the assets folder
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -14,7 +15,10 @@ const Hero = () => {
       <p className="hero-description">
         At Studio Molly, we're crafting design with heart and soul. <br/> Let's bring your vision to life.
       </p>
-      <a href="https://www.studiomolly.co/projects" className="hero-button">See My Work</a>
+
+
+<Link to="/projects" className="hero-button">See My Work</Link>
+
     </section>
   );
 };
