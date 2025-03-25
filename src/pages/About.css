@@ -125,7 +125,7 @@
 .about-skills {
     list-style: none;
     padding: 0;
-    text-align: center;
+
     margin-top: 1rem;
 }
 
@@ -169,39 +169,34 @@
     z-index: 1; /* Ensures the overlay is on top of the image but below the content */
 }
 
-.about-facts h3 {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    text-align: center;
-    color: #c2d2b8; /* Light beige color */
-    z-index: 2; /* Ensure the heading is on top of the overlay */
-}
-
 .about-facts li {
     list-style: none;
+    font-family: 'Alice', serif; /* Elegant serif font for the facts */
     width: 120px;
     height: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #c2d2b8; /* Light beige background */
+    background-color: #c2d2b8d1; /* Light beige background */
     color: #434837;
     font-size: 1rem;
     font-weight: 500;
     border-radius: 50%; /* Circle shape */
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     z-index: 2; /* Ensure the circle is above the overlay */
     text-align: center;
     padding: 0.8rem;
 }
 
+
+
 .about-facts li:hover {
     font-weight: bold; /* Deep earthy green text on hover */
     transform: scale(1.1); /* Slightly enlarge the circle on hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Bigger shadow on hover */
-    animation: bounce 0.8s ease; /* Bounce effect on hover */
+    transform: scale(1.2); /* Increase size by 20% */
+    box-shadow: 0 8px 20px rgba(248, 255, 252, 0.4); /* Add a subtle glow */
 }
+
 
 @keyframes bounce {
     0%, 100% {
