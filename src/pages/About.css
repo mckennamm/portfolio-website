@@ -1,47 +1,95 @@
 .about {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
+    justify-content: flex-start; /* Ensure top alignment */
+    padding: 40px 20px;
     background-color: #a8b89e; 
-    z-index: 1000;
-    margin-left: 155px; /* Match navbar width */   
-    width: 100%; 
-    margin-bottom: 500px;
+    margin-left: 155px; /* Match navbar width */
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding is included in width/height calculations */
 }
 
 .about-image {
-    width: 500px;
-    height: 400px;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
     border-radius: 20px; /* Rounded corners */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
     margin-bottom: 2rem; /* Space between image and text */
     border: 1px solid #434837; /* Deep earthy green */
     background-color: #434837; /* Deep earthy green */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; /* Ensures the image fits within the container */
-
-    z-index: 1000;
+    display: block; /* Ensure it's centered */
 }
 
 .about-title {
     font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     text-align: center;
-    max-width: 80%;  /* Allows it to be responsive while staying centered */
-    color: #434837;  /* White color for text */
-    z-index: 1000;  
+    max-width: 80%; /* Allows it to be responsive while staying centered */
+    color: #434837;  /* Deep earthy green */
 }
 
 .about-text {
     font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    max-width: 80%; /* Allows it to be responsive while staying centered */
+    color: #434837;  /* Deep earthy green */
+}
+
+.about-subtitle {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 2rem;
     margin-bottom: 1rem;
     text-align: center;
-    max-width: 80%;  /* Allows it to be responsive while staying centered */
-    color: #434837;  /* White color for text */
-    z-index: 1000;
+    color: #434837;
+}
+
+.about-skills {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.about-skills li {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #434837;
+}
+
+.about-facts {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.about-facts li {
+    font-size: 1.1rem;
+    color: #434837;
+    margin-bottom: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    .about-title {
+        font-size: 2rem;
+    }
+
+    .about-text {
+        font-size: 1rem;
+    }
+
+    .about-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .about-skills li,
+    .about-facts li {
+        font-size: 1rem;
+    }
 }
