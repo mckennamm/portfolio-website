@@ -135,6 +135,27 @@
     color: #434837;
 }
 
+.about-button {
+    background-color: #434837; /* Deep earthy green */
+    color: #fff; /* White text */
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+.about-button a{
+    color: #fff; /* White text */
+    text-decoration: none; /* Remove underline */
+    font-family: 'Alice', cursive; /* Playful font for the button */
+    font-size: 1.2rem;
+    
+}
+
 .about-facts {
     display: flex;
     flex-wrap: wrap;

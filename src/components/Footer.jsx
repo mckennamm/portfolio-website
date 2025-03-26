@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="footer-contact">
           <h3>Contact Me</h3>
           <p>Email: <a href="mailto:studiomolly.webdesign@gmail.com">studiomolly.webdesign@gmail.com</a></p>
-          <p>Instagram: <a href="https://instagram.com/studio.molly" target="_blank" rel="noopener noreferrer">@studio.molly.designs</a></p>
+          <p>Instagram: <a href="https://www.instagram.com/studio.molly.designs/" target="_blank" rel="noopener noreferrer">@studio.molly.designs</a></p>
         </div>
 
           <img src={footerLogo} alt="Studio Molly Logo" className="footer-logo" />

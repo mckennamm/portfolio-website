@@ -34,6 +34,10 @@ const About = () => {
                 <li><strong>Backend & Tools</strong> Firebase, Node.js, Vercel (deploying websites)</li>
             </ul>
 
+            <button className="about-button">
+                <a href="https://github.com/mckennamm" target="_blank" rel="noopener noreferrer">Check out my GitHub</a>
+            </button>
+
             <p className="about-text">For me, web development is about more than just tools and frameworks—it’s about creating digital experiences that feel intuitive, engaging, and accessible. I’m always eager to expand my skill set and stay curious about emerging technologies, believing that continuous learning keeps my work fresh and inspired.</p>
 
 
