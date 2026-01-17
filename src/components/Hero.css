@@ -1,0 +1,75 @@
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  margin: 0;
+
+  /* Background image */
+  background-image: url("../assets/backgroundimg7.jpg"); /* <-- your photo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Dark overlay for readability */
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 0;
+}
+
+/* Text content */
+.hero__content {
+  position: relative;
+  z-index: 1;
+
+  padding-top: 80px; /* navbar height */
+  max-width: 800px;
+  padding-inline: 1.5rem;
+
+  color: white;
+}
+
+/* Typography */
+.hero-title {
+  font-family: var(--font-family-special);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.hero-description {
+  font-family: var(--font-family-body);
+  color: white;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* CTA button */
+.hero-button {
+  display: inline-block;
+  padding: 0.9rem 2.2rem;
+  border-radius: 5%;
+
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.hero-button:hover {
+  transform: translateY(-3px);
+  background-color: #cf6f1e;
+}

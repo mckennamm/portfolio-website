@@ -2,8 +2,9 @@
 import './App.css'
 import ErrorBoundary from './ErrorBoundary'
 import Header from './components/Header'
+import Home from './pages/Home'
 import Navbar from './components/Navbar'
-import Hero from './pages/Hero'
+import Hero from './components/Hero'
 import Projects from './pages/Projects'
 import Blog from './pages/Blog'
 import About from './pages/About'
@@ -18,10 +19,10 @@ function App() {
     <>
       <ErrorBoundary>
       <div>
-        <Header />
         <Navbar />
         <Routes>
           <Route path="/" element={<Hero />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/blog" element={<Blog />} />

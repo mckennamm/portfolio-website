@@ -1,19 +1,17 @@
 /* Footer Styles */
 .footer {
-  background-color: #434837; /* Deep earthy green */
+  background-color: #0c0f04; /* Deep earthy green */
   color: #fff;
   padding: 2rem 1rem;
   text-align: center;
   width: 100%; /* Ensure the footer spans the full width */
-  margin-left: 140px; /* Center the footer */
   position: relative; /* Allow natural positioning in the document flow */
   z-index: 11; /* Ensure it appears above other content */
-  
 }
 
 .thank-you-message {
   font-size: 1.5rem;
-  font-family: 'Megrim', sans-serif;
+  font-family: var(--font-family-body);
   margin-bottom: 2rem;
   color: #f5f5f5; /* Light color for contrast */
   text-align: center;
@@ -30,7 +28,7 @@
 }
 
 .footer-logo {
-  height: 200px; /* Adjust height as needed */
+  height: 300px; /* Adjust height as needed */
   width: auto; /* Maintain aspect ratio */
 }
 
@@ -48,7 +46,7 @@
 .footer-contact h3,
 .footer-links h3 {
   font-size: 1.75rem;
-  font-family: 'Megrim', sans-serif;
+  font-family: var(--font-family-heading);
   margin-bottom: 1rem;
   color: #f5f5f5;
 }
@@ -59,7 +57,7 @@
   font-size: 1rem;
   line-height: 1.6;
   color: #dcdcdc;
-  font-family: 'Alice', sans-serif;
+  font-family: var(--font-family-body);
   text-decoration: none;
 }
 
@@ -82,7 +80,7 @@
   width: 100%;
   font-size: 0.9rem;
   color: #dcdcdc;
-  font-family: 'Alice', sans-serif;
+  font-family: var(--font-family-body);
   margin-top: 1.5rem;
   padding-top: 1rem;
   border-top: 1px solid #5d6a4a; /* Softer divider */

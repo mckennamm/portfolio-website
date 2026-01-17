@@ -1,8 +1,10 @@
 import React from "react";
 import "./Projects.css";
 import homepage from "../assets/home-page.png";
-import screenshot from '../assets/portfolio-screenshot2.png';
+import screenshot from '../assets/portfoliohome.png';
 import comingSoon from '../assets/coming-soon.svg';
+import binkleyphoto from '../assets/binkleyphoto.png';
+import bardchirp from '../assets/bardchirp.png';
 
 const Projects = () => {
   console.log("Projects component rendered");
@@ -24,7 +26,7 @@ const Projects = () => {
         "A social platform built for a Dungeons & Dragons group, designed to allow players to share thoughts, updates, and keep in touch. This project combines my passion for D&D with my web development skills, featuring a user-friendly interface and real-time updates.",
       link: "https://github.com/mckennamm/BardChirp",
       website: "https://bardchirp.com/",
-      image: comingSoon,
+      image: bardchirp,
     },
     {
       id: 3,
@@ -34,6 +36,14 @@ const Projects = () => {
       link: "https://github.com/mckennamm/wedding-website2.0",
       website: "https://www.cameronandmolly.com/",
       image: homepage,
+    },
+    {
+      id: 3,
+      title: "Binkley Preschool 🛝",
+      description:
+        "A welcoming preschool website designed to support families every step of the way. The site highlights programs, enrollment information, and school values, creating a friendly and informative experience for parents while reflecting Binkley Preschool’s nurturing learning environment.",
+      website: "https://www.binkleypreschool.org/",
+      image: binkleyphoto,
     },
   ];
 
