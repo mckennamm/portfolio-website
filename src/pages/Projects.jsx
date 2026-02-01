@@ -19,14 +19,13 @@ const Projects = () => {
       website: "https://www.studiomolly.co/",
       image: screenshot,
     },
-    {
+        {
       id: 2,
-      title: "BardChirp 🐥",
+      title: "Binkley Preschool 🛝",
       description:
-        "A social platform built for a Dungeons & Dragons group, designed to allow players to share thoughts, updates, and keep in touch. This project combines my passion for D&D with my web development skills, featuring a user-friendly interface and real-time updates.",
-      link: "https://github.com/mckennamm/BardChirp",
-      website: "https://bardchirp.com/",
-      image: bardchirp,
+        "A welcoming preschool website designed to support families every step of the way. The site highlights programs, enrollment information, and school values, creating a friendly and informative experience for parents while reflecting Binkley Preschool’s nurturing learning environment.",
+      website: "https://www.binkleypreschool.org/",
+      image: binkleyphoto,
     },
     {
       id: 3,
@@ -37,13 +36,32 @@ const Projects = () => {
       website: "https://www.cameronandmolly.com/",
       image: homepage,
     },
-    {
-      id: 3,
-      title: "Binkley Preschool 🛝",
+  {
+      id: 4,
+      title: "BardChirp 🐥",
       description:
-        "A welcoming preschool website designed to support families every step of the way. The site highlights programs, enrollment information, and school values, creating a friendly and informative experience for parents while reflecting Binkley Preschool’s nurturing learning environment.",
-      website: "https://www.binkleypreschool.org/",
-      image: binkleyphoto,
+        "A social platform built for a Dungeons & Dragons group, designed to allow players to share thoughts, updates, and keep in touch. This project combines my passion for D&D with my web development skills, featuring a user-friendly interface and real-time updates.",
+      link: "https://github.com/mckennamm/BardChirp",
+      website: "https://bardchirp.com/",
+      image: bardchirp,
+    },
+      {
+      id: 4,
+      title: "BardChirp 🐥",
+      description:
+        "A social platform built for a Dungeons & Dragons group, designed to allow players to share thoughts, updates, and keep in touch. This project combines my passion for D&D with my web development skills, featuring a user-friendly interface and real-time updates.",
+      link: "https://github.com/mckennamm/BardChirp",
+      website: "https://bardchirp.com/",
+      image: bardchirp,
+    },
+      {
+      id: 4,
+      title: "BardChirp 🐥",
+      description:
+        "A social platform built for a Dungeons & Dragons group, designed to allow players to share thoughts, updates, and keep in touch. This project combines my passion for D&D with my web development skills, featuring a user-friendly interface and real-time updates.",
+      link: "https://github.com/mckennamm/BardChirp",
+      website: "https://bardchirp.com/",
+      image: bardchirp,
     },
   ];
 
@@ -59,7 +77,7 @@ const Projects = () => {
               className="project-image"
             />
             <h3 className="project-title">{project.title}</h3>
-            <p className="project-description">{project.description}</p>
+            {/* <p className="project-description">{project.description}</p> */}
             <a
               href={project.link}
               target="_blank"

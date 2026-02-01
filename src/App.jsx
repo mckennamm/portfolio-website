@@ -11,6 +11,7 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import Footer from './components/Footer'  
 import { Routes, Route } from 'react-router-dom'
+import Services from './pages/Services'
 
 
 function App() {
@@ -21,11 +22,10 @@ function App() {
       <div>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Hero />} />
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/blog" element={<Blog />} />
+          <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />

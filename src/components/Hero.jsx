@@ -1,6 +1,7 @@
 import "./Hero.css";
 import { Link } from "react-router-dom";
 
+import icon from "../assets/two-leaf-icon.png";
 
 const Hero = () => {
   return (
@@ -8,13 +9,14 @@ const Hero = () => {
       <div className="hero__overlay" />
 
       <div className="hero__content">
-        <h1 className="hero-title">Boutique Web Design Studio in Durham, North Carolina</h1>
-         <h2 className="hero-description">
-          Let's create something.
-        </h2> 
+        <img src={icon} alt="Icon" className="hero-icon" />
+        <h1 className="hero-title">Let's create something.</h1>
+         {/* <h2 className="hero-description">
+          Web Designer in Durham, North Carolina
+        </h2>  */}
 
         <Link to="/projects" className="hero-button">
-          See My Work
+          View My Services
         </Link>
       </div>
     </section>

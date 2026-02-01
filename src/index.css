@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Poiret+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poiret+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
 
 :root {
   line-height: 1.5;
@@ -17,12 +17,19 @@
 
 /*Global Variables*/
 :root {
-    --primary-color: #656d53;
-    --accent-color: #ede2d8;
-    --font-family-special: 'Poiret One', serif;
-    --font-family-heading: 'Alice', serif;
-    --font-family-body: 'Poppins', sans-serif;
-    --button-color: #e67e22;
+    /* Colors */
+    --primary-color: #8FA99B;
+    --text-color: #2F2F2F;
+    --neutral-accent: #B8A89A;
+    --accent-color: #99725F;
+    --neutral-light: #f7f5f2;
+    --button-color: #C9A25D;
+
+    /* Font Families */
+    --font-family-accent: 'Poiret One', serif;
+    --font-family-heading: 'Fraunces', serif;
+    --font-family-body: 'Inter', sans-serif;
+    
   }
 #root {
   width: 100%;

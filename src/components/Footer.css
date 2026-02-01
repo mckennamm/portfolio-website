@@ -1,20 +1,15 @@
 /* Footer Styles */
 .footer {
-  background-color: #0c0f04; /* Deep earthy green */
-  color: #fff;
+  background-color: #f7f5f2; /* Deep earthy green */
+  color: #2F2F2F;
   padding: 2rem 1rem;
   text-align: center;
   width: 100%; /* Ensure the footer spans the full width */
   position: relative; /* Allow natural positioning in the document flow */
+  max-height: 300px;
   z-index: 11; /* Ensure it appears above other content */
-}
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
 
-.thank-you-message {
-  font-size: 1.5rem;
-  font-family: var(--font-family-body);
-  margin-bottom: 2rem;
-  color: #f5f5f5; /* Light color for contrast */
-  text-align: center;
 }
 
 /* Container for all footer content */
@@ -39,7 +34,10 @@
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+}
+.footer-contact {
+  margin-right: 0 2rem;
 }
 
 /* Heading Styles */
@@ -47,8 +45,7 @@
 .footer-links h3 {
   font-size: 1.75rem;
   font-family: var(--font-family-heading);
-  margin-bottom: 1rem;
-  color: #f5f5f5;
+  color: #2F2F2F;
 }
 
 /* Contact and Link Text */
@@ -56,30 +53,39 @@
 .footer-links a {
   font-size: 1rem;
   line-height: 1.6;
-  color: #dcdcdc;
+  color: #2F2F2F;
   font-family: var(--font-family-body);
   text-decoration: none;
 }
 
+.footer-contact p {
+  line-height: 0.5;
+}
 /* Link Colors */
 .footer-contact a,
 .footer-link {
-  color: #b2c0a1; /* Softer green */
+  color: #2F2F2F; /* Softer green */
   transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .footer-contact a:hover,
 .footer-link:hover {
-  color: #f5f5f5;
+  color: #2F2F2F;
   text-decoration: underline;
   transform: translateY(-2px);
+}
+
+.footer-span {
+  font-weight: bold;
+  font-family: var(--font-family-heading);
+  margin-right: 0.5rem;
 }
 
 /* Footer Bottom Styles */
 .footer-bottom {
   width: 100%;
   font-size: 0.9rem;
-  color: #dcdcdc;
+  color: #2F2F2F;
   font-family: var(--font-family-body);
   margin-top: 1.5rem;
   padding-top: 1rem;

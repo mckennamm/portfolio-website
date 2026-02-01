@@ -1,0 +1,218 @@
+/* ServicesOverview.css */
+
+.servicesOverview {
+  width: 100%;
+  padding: clamp(2.5rem, 4vw, 4rem) 0;
+}
+
+.servicesOverview__inner {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.servicesOverview__header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.75rem;
+}
+
+.servicesOverview__headingGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.servicesOverview__title {
+  font-family: var(--font-family-accent);
+  font-size: clamp(1.5rem, 2.6vw, 3.2rem);
+  color: var(--text-color);
+  letter-spacing: 0.02em;
+  margin: 0;
+
+  width: 220px;
+  height: 96px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* border: 3px solid rgba(20, 20, 20, 0.18);
+  border-radius: 999px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+  backdrop-filter: blur(8px);
+}
+
+.servicesOverview__description {
+  margin-top: 0.6rem;
+  font-family: var(--font-family-body);
+  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+  color: var(--text-color);
+  text-align: center;
+  max-width: 46ch;
+}
+
+/* ---- PAIRED “CHECKERED” GRID ---- */
+/* 2 rows of pairs on desktop; each pair contains 2 tiles = 2x4 tiles total */
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(0.9rem, 2vw, 1.25rem);
+}
+
+/* Each pair is a 2-tile unit */
+.servicePair {
+  display: grid;
+  grid-template-columns: 0.9fr 1.35fr;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: inherit;
+  align-items: stretch;
+
+  /* Make the whole pair feel clickable */
+  border-radius: 20px;
+  transition: transform 220ms cubic-bezier(.2,.8,.2,1);
+}
+
+.servicePair:hover {
+  transform: translateY(-3px);
+}
+
+.servicePair:focus-visible {
+  outline: 2px solid rgba(20, 20, 20, 0.6);
+  outline-offset: 4px;
+}
+
+.serviceTile {
+  border-radius: 20px;
+  min-height: 96px;
+
+  /* background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px); */
+/* 
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6); */
+
+  /* IMPORTANT: no border (per your request) */
+  border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    transform 260ms cubic-bezier(.2,.8,.2,1),
+    box-shadow 260ms cubic-bezier(.2,.8,.2,1),
+    background 260ms ease;
+}
+
+/* Icon tile: slightly “lighter” and centered */
+/* .serviceTile--icon {
+  background: rgba(255, 255, 255, 0.52);
+} */
+
+/* Text tile: more padding, left-aligned text */
+.serviceTile--text {
+  justify-content: flex-start;
+  /* padding: 1.15rem 1.25rem; */
+}
+
+/* The icon itself */
+.serviceIcon {
+  width: 38px;
+  height: 38px;
+  color: var(--text-color);
+  opacity: 0.9;
+}
+
+.serviceIconImg {
+  width: 200px;
+  height: 200px;
+  display: block;
+  opacity: 0.92;
+}
+
+
+/* Text styles */
+.serviceText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.serviceTitle {
+  font-family: var(--font-family-body);
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  font-weight: 550;
+  letter-spacing: 0.01em;
+  color: var(--text-color);
+}
+
+.serviceSubtitle {
+  font-family: var(--font-family-body);
+  font-size: 0.95rem;
+  line-height: 1.35;
+  color: var(--text-color);
+  opacity: 0.85;
+}
+
+/* Hover “dynamic” moment (subtle, studio-like) */
+/* .servicePair:hover .serviceTile {
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow:
+    0 16px 34px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+} */
+
+.servicePair:hover .serviceTile--icon {
+  transform: scale(1.03);
+}
+
+/* ---- Dark mode ---- */
+body.dark .serviceTile,
+.dark .serviceTile {
+  background: rgba(20, 20, 20, 0.55);
+  box-shadow:
+    0 14px 30px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+body.dark .serviceTile--icon,
+.dark .serviceTile--icon {
+  background: rgba(20, 20, 20, 0.48);
+}
+
+body.dark .servicePair:hover .serviceTile,
+.dark .servicePair:hover .serviceTile {
+  background: rgba(30, 30, 30, 0.75);
+}
+
+body.dark .servicePair:focus-visible,
+.dark .servicePair:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 860px) {
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .servicePair {
+    grid-template-columns: 0.85fr 1.5fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .servicePair {
+    grid-template-columns: 1fr;
+  }
+
+  .serviceTile--text {
+    padding: 1rem 1.1rem;
+  }
+
+  .serviceTile--icon {
+    min-height: 84px;
+  }
+}

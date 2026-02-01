@@ -3,6 +3,9 @@
   width: 100%;
   min-height: 100vh;
 
+  /* Push content down so it sits under fixed transparent navbar */
+  /* padding-top: 80px; match navbar height */
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,66 +13,81 @@
 
   margin: 0;
 
-  /* Background image */
-  background-image: url("../assets/backgroundimg7.jpg"); /* <-- your photo */
+  /* background-color: #8FA99B; */
+  /* background-image: url('../assets/hero-bg-potential-1.png'); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
 }
 
 /* Dark overlay for readability */
 .hero__overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.35);
+  background: linear-gradient(
+      to bottom,
+       #f7f5f2,
+      #8fa99b90
+    );
   z-index: 0;
 }
+
+.hero-icon {
+  width: 200px;
+  height: auto;
+} 
 
 /* Text content */
 .hero__content {
   position: relative;
   z-index: 1;
 
-  padding-top: 80px; /* navbar height */
-  max-width: 800px;
-  padding-inline: 1.5rem;
+  /* Remove this — hero handles the navbar offset now */
+  /* padding-top: 80px; */
 
-  color: white;
+  max-width: 800px;
+  /* padding-inline: 1.5rem; */
+  color: var(--text-color);
 }
 
 /* Typography */
 .hero-title {
-  font-family: var(--font-family-special);
+  font-family: var(--font-family-accent);
   font-size: clamp(2.5rem, 6vw, 4rem);
   font-weight: bold;
-  margin-bottom: 1rem;
-  color: white;
+  /* margin-bottom: 1rem; */
+  color: var(--text-color);
 }
 
 .hero-description {
   font-family: var(--font-family-body);
-  color: white;
+  color: var(--text-color);
   font-size: 1.2rem;
   line-height: 1.6;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
 }
 
 /* CTA button */
 .hero-button {
   display: inline-block;
   padding: 0.9rem 2.2rem;
-  border-radius: 5%;
-
+  border-radius: 800px; /* optional: nicer pill */
   background-color: var(--primary-color);
-  color: white;
+  color: var(--text-color);
+  margin-top: 1rem;
   text-decoration: none;
-  font-weight: 600;
+  /* font-weight: bold; */
+  font-family: var(--font-family-body);
   letter-spacing: 0.05em;
-
   transition: transform 0.25s ease, background-color 0.25s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
 }
 
 .hero-button:hover {
   transform: translateY(-3px);
-  background-color: #cf6f1e;
+  color: var(--neutral-light);
+  background-color: var(--accent-color);
+
 }

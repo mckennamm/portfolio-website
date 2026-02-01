@@ -1,0 +1,30 @@
+/* Home page layout only
+   Section components handle their own styling */
+
+main {
+  display: flex;
+  flex-direction: column;
+  background-color: #f7f5f2;
+
+}
+
+/* Consistent vertical spacing between home sections */
+main > * + * {
+  margin-top: 4rem;
+  /* background-color: #131212; */
+}
+
+.spacerLarge {
+  height: 6rem;
+}
+
+
+
+
+
+/* Optional: slightly tighter spacing on small screens */
+@media (max-width: 768px) {
+  main > * + * {
+    margin-top: 3rem;
+  }
+}
