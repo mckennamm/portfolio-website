@@ -11,18 +11,6 @@ import visualIdentityIcon from "../assets/visual-identity-icon.svg";
 
 const services = [
   {
-    title: "Brand Direction",
-    to: "/services#brand-direction",
-    subtitle: "Messaging, positioning, and strategy",
-    icon: brandDirectionIcon,
-  },
-  {
-    title: "Visual Identity",
-    to: "/services#visual-identity",
-    subtitle: "Marks, icons, and hand-drawn elements",
-    icon: visualIdentityIcon,
-  },
-  {
     title: "Web Design",
     to: "/services#web-design",
     subtitle: "Custom website design and user experience",
@@ -33,6 +21,18 @@ const services = [
     to: "/services#front-end-development",
     subtitle: "HTML, CSS, JavaScript, and React",
     icon: frontendDevIcon,
+  },
+    {
+    title: "Brand Direction",
+    to: "/services#brand-direction",
+    subtitle: "Messaging, positioning, and strategy",
+    icon: brandDirectionIcon,
+  },
+  {
+    title: "Visual Identity",
+    to: "/services#visual-identity",
+    subtitle: "Marks, icons, and hand-drawn elements",
+    icon: visualIdentityIcon,
   },
 ];
 

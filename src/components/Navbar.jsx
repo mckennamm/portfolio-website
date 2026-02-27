@@ -10,10 +10,10 @@ const Navbar = () => {
       </Link>
 
       <ul className="navbar__list">
-        {/* <li className="navbar__item"><Link to="/">Home</Link></li> */}
-        <li className="navbar__item"><Link to="/about">About</Link></li>
+        <li className="navbar__item"><Link to="/">Home</Link></li> 
+        <li className="navbar__item"><Link to="/about">Our Story</Link></li>
         <li className="navbar__item"><Link to="/services">Services</Link></li>
-        <li className="navbar__item"><Link to="/work">Projects</Link></li>
+        {/* <li className="navbar__item"><Link to="/work">Projects</Link></li> */}
         {/* <li className="navbar__item"><Link to="/blog">Blog</Link></li> */}
         <li className="navbar__item"><Link to="/contact">Contact</Link></li>
       </ul>

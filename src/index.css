@@ -6,7 +6,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #f5f4f2;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -26,7 +26,7 @@
     --button-color: #C9A25D;
 
     /* Font Families */
-    --font-family-accent: 'Poiret One', serif;
+    /* --font-family-accent: 'Poiret One', serif; */
     --font-family-heading: 'Fraunces', serif;
     --font-family-body: 'Inter', sans-serif;
     

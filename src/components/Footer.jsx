@@ -9,7 +9,7 @@ const Footer = () => {
 
         <div className="footer-links">
           <h3>Explore</h3>
-          <a href="/blog" className="footer-link">Visit My Blog</a>
+          <a href="https://studiomolly.blogspot.com/" className="footer-link">Visit My Blog</a>
           <a href="/projects"
             className="footer-link">Check Out My Projects</a>
           <p className="footer-bottom">&copy; {new Date().getFullYear()} Studio Molly. All rights reserved.</p>

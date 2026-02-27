@@ -1,27 +1,24 @@
 import { Link } from "react-router-dom";
 import "./Services.css";
 
-function ServiceSection({ id, title, intro, bullets, bestFor }) {
+function ServiceSection({ id, number, title, intro, bullets, bestFor }) {
   return (
     <section className="serviceSection" id={id} aria-labelledby={`${id}-title`}>
-      <div className="serviceSection__header">
-        <h2 className="serviceSection__title" id={`${id}-title`}>
-          {title}
-        </h2>
-        <p className="serviceSection__intro">{intro}</p>
+      <div className="serviceSection__meta">
+        <span className="serviceSection__number">{number}</span>
+        <div className="serviceSection__headerText">
+          <h2 className="serviceSection__title" id={`${id}-title`}>{title}</h2>
+          <p className="serviceSection__intro">{intro}</p>
+        </div>
       </div>
 
       <div className="serviceSection__body">
-        <div className="serviceSection__card">
-          <h3 className="serviceSection__subhead">Includes</h3>
-          <ul className="serviceSection__list">
-            {bullets.map((b) => (
-              <li key={b}>{b}</li>
-            ))}
-          </ul>
-
-          {bestFor ? <p className="serviceSection__bestFor">{bestFor}</p> : null}
-        </div>
+        {/* <ul className="serviceSection__list">
+          {bullets.map((b) => (
+            <li key={b}>{b}</li>
+          ))}
+        </ul>
+        {bestFor && <p className="serviceSection__bestFor">{bestFor}</p>} */}
       </div>
     </section>
   );
@@ -30,23 +27,17 @@ function ServiceSection({ id, title, intro, bullets, bestFor }) {
 export default function Services() {
   return (
     <main className="servicesPage">
+
       {/* Hero */}
       <header className="servicesHero">
         <div className="servicesHero__inner">
+          <span className="servicesHero__label">Studio Molly</span>
           <h1 className="servicesHero__title">Services</h1>
           <p className="servicesHero__lede">
-            I offer a small set of services that work well together, whether you
-            need a full website build or just help getting your visuals and
-            direction clear.
+            From brand direction to full builds, I offer a focused set of services designed to work together, or on their own.
           </p>
-
           <div className="servicesHero__actions">
-            <Link className="btnPrimary" to="/contact">
-              Contact me
-            </Link>
-            {/* <a className="btnSecondary" href="#services-list">
-              Explore services
-            </a> */}
+            <Link className="btnPrimary" to="/contact">Contact me</Link>
           </div>
         </div>
       </header>
@@ -55,6 +46,7 @@ export default function Services() {
       <div className="servicesContent" id="services-list">
         <ServiceSection
           id="brand-direction"
+          number="01"
           title="Brand Direction"
           intro="A calm, practical way to get clarity on your tone, message, and overall presence, so your website feels like you."
           bullets={[
@@ -69,6 +61,7 @@ export default function Services() {
 
         <ServiceSection
           id="visual-identity"
+          number="02"
           title="Visual Identity"
           intro="A cohesive visual system you can reuse everywhere. This is where custom marks, hand-drawn elements, and icon styles can live."
           bullets={[
@@ -83,6 +76,7 @@ export default function Services() {
 
         <ServiceSection
           id="web-design"
+          number="03"
           title="Web Design"
           intro="Thoughtful page layouts, strong hierarchy, and responsive design that helps people understand you quickly and move with ease."
           bullets={[
@@ -97,6 +91,7 @@ export default function Services() {
 
         <ServiceSection
           id="front-end-development"
+          number="04"
           title="Front-End Development"
           intro="A clean, responsive build with components that are organized and maintainable. This is where the design becomes a real website."
           bullets={[
@@ -113,26 +108,30 @@ export default function Services() {
       {/* Process */}
       <section className="servicesProcess" aria-labelledby="process-title">
         <div className="servicesProcess__inner">
-          <h2 className="servicesProcess__title" id="process-title">
-            What it’s like to work together
+          <span className="services__sectionLabel">How it works</span>
+          <h2 className="services__sectionTitle" id="process-title">
+            What it's like to work together
           </h2>
-
           <ol className="processSteps">
-            <li>
-              <strong>Discover</strong>
-              <span>We get clear on goals, audience, and what your site needs to do.</span>
+            <li className="processStep">
+              <span className="processStep__number">01</span>
+              <strong className="processStep__title">Discover</strong>
+              <span className="processStep__text">We get clear on goals, audience, and what your site needs to do.</span>
             </li>
-            <li>
-              <strong>Direction + design</strong>
-              <span>We shape the look, structure, and content priorities.</span>
+            <li className="processStep">
+              <span className="processStep__number">02</span>
+              <strong className="processStep__title">Direction + design</strong>
+              <span className="processStep__text">We shape the look, structure, and content priorities.</span>
             </li>
-            <li>
-              <strong>Build</strong>
-              <span>I develop the site with clean components and responsive layouts.</span>
+            <li className="processStep">
+              <span className="processStep__number">03</span>
+              <strong className="processStep__title">Build</strong>
+              <span className="processStep__text">I develop the site with clean components and responsive layouts.</span>
             </li>
-            <li>
-              <strong>Launch + handoff</strong>
-              <span>You get a site you can live with and maintain confidently.</span>
+            <li className="processStep">
+              <span className="processStep__number">04</span>
+              <strong className="processStep__title">Launch + handoff</strong>
+              <span className="processStep__text">You get a site you can live with and maintain confidently.</span>
             </li>
           </ol>
         </div>
@@ -142,17 +141,15 @@ export default function Services() {
       <section className="servicesCta" aria-labelledby="cta-title">
         <div className="servicesCta__inner">
           <h2 className="servicesCta__title" id="cta-title">
-            Ready to build something calm and clear?
+            Ready to build something?
           </h2>
-          <p className="servicesCta__text">
-            If you tell me a little about what you’re making, I’ll tell you what
-            I’d recommend and what a realistic next step looks like.
+           <p className="servicesCta__text">
+            Have a project in mind? I'd love to hear about it!
           </p>
-          <Link className="btnPrimary" to="/contact">
-            Get in touch
-          </Link>
+          <Link className="btnPrimary" to="/contact">Get in touch</Link>
         </div>
       </section>
+
     </main>
   );
 }
