@@ -1,117 +1,109 @@
-/* Footer Styles */
-.footer {
-  background-color: #f7f5f2; /* Deep earthy green */
-  color: #2F2F2F;
-  padding: 2rem 1rem;
-  text-align: center;
-  width: 100%; /* Ensure the footer spans the full width */
-  position: relative; /* Allow natural positioning in the document flow */
-  max-height: 300px;
-  z-index: 11; /* Ensure it appears above other content */
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+/* ─────────────────────────────────────────
+   Footer — Clean Modern Minimalist
+   ───────────────────────────────────────── */
 
+.footer {
+    background-color: var(--neutral-light);
+    border-top: 1px solid rgba(47, 47, 47, 0.08);
+    width: 100%;
+    box-sizing: border-box;
 }
 
-/* Container for all footer content */
+/* ── Main container ── */
 .footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  max-width: 1000px;
-  margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 2.5rem;
+    align-items: start;
+}
+
+/* ── Brand / logo ── */
+.footer-brand {
+    display: flex;
+    align-items: flex-start;
 }
 
 .footer-logo {
-  height: 300px; /* Adjust height as needed */
-  width: auto; /* Maintain aspect ratio */
+    height: 200px;
+    width: auto;
+    object-fit: contain;
 }
 
-/* Contact and Links section */
-.footer-contact,
-.footer-links {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  margin-bottom: 1rem;
-}
-.footer-contact {
-  margin-right: 0 2rem;
-}
-
-/* Heading Styles */
-.footer-contact h3,
-.footer-links h3 {
-  font-size: 1.75rem;
-  font-family: var(--font-family-heading);
-  color: #2F2F2F;
-}
-
-/* Contact and Link Text */
-.footer-contact p,
-.footer-links a {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #2F2F2F;
-  font-family: var(--font-family-body);
-  text-decoration: none;
-}
-
-.footer-contact p {
-  line-height: 0.5;
-}
-/* Link Colors */
-.footer-contact a,
-.footer-link {
-  color: #2F2F2F; /* Softer green */
-  transition: color 0.3s ease, transform 0.2s ease;
-}
-
-.footer-contact a:hover,
-.footer-link:hover {
-  color: #2F2F2F;
-  text-decoration: underline;
-  transform: translateY(-2px);
-}
-
-.footer-span {
-  font-weight: bold;
-  font-family: var(--font-family-heading);
-  margin-right: 0.5rem;
-}
-
-/* Footer Bottom Styles */
-.footer-bottom {
-  width: 100%;
-  font-size: 0.9rem;
-  color: #2F2F2F;
-  font-family: var(--font-family-body);
-  margin-top: 1.5rem;
-  padding-top: 1rem;
-  border-top: 1px solid #5d6a4a; /* Softer divider */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .footer {
-    padding: 2rem 1rem;
-  }
-
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer-contact,
-  .footer-links {
-    align-items: center;
-  }
-
-  .footer-bottom {
-    text-align: center; /* Center the text */
+/* ── Columns ── */
+.footer-col {
     display: flex;
-    justify-content: center;
-  }
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.footer-heading {
+    font-family: var(--font-family-heading);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-color);
+    margin: 0 0 0.4rem 0;
+}
+
+.footer-link {
+    font-family: var(--font-family-body);
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #888;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    line-height: 1.5;
+}
+
+.footer-link:hover {
+    color: var(--text-color);
+}
+
+/* ── Bottom bar ── */
+.footer-bottom {
+    border-top: 1px solid rgba(47, 47, 47, 0.08);
+    padding: 1.25rem 2.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-bottom p {
+    font-family: var(--font-family-body);
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: #aaa;
+    margin: 0;
+}
+
+/* ─────────────────────────────────────────
+   Responsive
+   ───────────────────────────────────────── */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        padding: 2.5rem 1.5rem;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        padding: 2rem 1.25rem;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+    .footer-bottom {
+        padding: 1rem 1.25rem;
+    }
 }

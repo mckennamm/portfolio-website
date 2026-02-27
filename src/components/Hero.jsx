@@ -15,7 +15,7 @@ const Hero = () => {
           Web Designer in Durham, North Carolina
         </h2>  */}
 
-        <Link to="/projects" className="hero-button">
+        <Link to="/services" className="hero-button">
           View My Services
         </Link>
       </div>
