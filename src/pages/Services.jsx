@@ -1,9 +1,17 @@
 import { Link } from "react-router-dom";
 import "./Services.css";
+import useScrollFade from "../hooks/useScrollFade";
 
 function ServiceSection({ id, number, title, intro, bullets, bestFor }) {
+  const [ref, visible] = useScrollFade();
+
   return (
-    <section className="serviceSection" id={id} aria-labelledby={`${id}-title`}>
+    <section
+      ref={ref}
+      className={`serviceSection fade-up ${visible ? "is-visible" : ""}`}
+      id={id}
+      aria-labelledby={`${id}-title`}
+    >
       <div className="serviceSection__meta">
         <span className="serviceSection__number">{number}</span>
         <div className="serviceSection__headerText">
@@ -25,6 +33,10 @@ function ServiceSection({ id, number, title, intro, bullets, bestFor }) {
 }
 
 export default function Services() {
+  const [tiersRef, tiersVisible] = useScrollFade();
+  const [processRef, processVisible] = useScrollFade();
+  const [ctaRef, ctaVisible] = useScrollFade();
+
   return (
     <main className="servicesPage">
 
@@ -106,7 +118,11 @@ export default function Services() {
       </div>
 
       {/* Pricing Tiers */}
-      <section className="servicesTiers" aria-labelledby="tiers-title">
+      <section
+        ref={tiersRef}
+        className={`servicesTiers fade-up ${tiersVisible ? "is-visible" : ""}`}
+        aria-labelledby="tiers-title"
+      >
         <div className="servicesTiers__inner">
           <span className="services__sectionLabel">Investment</span>
           <h2 className="services__sectionTitle" id="tiers-title">
@@ -149,7 +165,11 @@ export default function Services() {
       </section>
 
       {/* Process */}
-      <section className="servicesProcess" aria-labelledby="process-title">
+      <section
+        ref={processRef}
+        className={`servicesProcess fade-up ${processVisible ? "is-visible" : ""}`}
+        aria-labelledby="process-title"
+      >
         <div className="servicesProcess__inner">
           <span className="services__sectionLabel">How it works</span>
           <h2 className="services__sectionTitle" id="process-title">
@@ -181,7 +201,11 @@ export default function Services() {
       </section>
 
       {/* CTA */}
-      <section className="servicesCta" aria-labelledby="cta-title">
+      <section
+        ref={ctaRef}
+        className={`servicesCta fade-up ${ctaVisible ? "is-visible" : ""}`}
+        aria-labelledby="cta-title"
+      >
         <div className="servicesCta__inner">
           <h2 className="servicesCta__title" id="cta-title">
             Ready to build something?

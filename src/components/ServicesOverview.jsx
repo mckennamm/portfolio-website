@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
 import "./ServicesOverview.css";
+import useScrollFade from "../hooks/useScrollFade";
 
-/**
- * Hand-drawn SVG icon assets
- */
 import webDesignIcon from "../assets/web-design-icon.svg";
 import frontendDevIcon from "../assets/frontend-dev-icon.svg";
 import brandDirectionIcon from "../assets/brand-direction-icon.svg";
@@ -23,7 +21,7 @@ const services = [
     subtitle: "HTML, CSS, JavaScript, and React",
     icon: ginkgoLeaf,
   },
-    {
+  {
     title: "Brand Direction",
     to: "/services#brand-direction",
     subtitle: "Messaging, positioning, and strategy",
@@ -38,9 +36,12 @@ const services = [
 ];
 
 export default function ServicesOverview() {
+  const [ref, visible] = useScrollFade();
+
   return (
     <section
-      className="servicesOverview"
+      ref={ref}
+      className={`servicesOverview fade-up ${visible ? "is-visible" : ""}`}
       aria-labelledby="servicesOverviewTitle"
     >
       <div className="servicesOverview__inner">
@@ -52,10 +53,6 @@ export default function ServicesOverview() {
             >
               Services
             </h2>
-
-            {/* <p className="servicesOverview__description">
-              A small set of offerings, designed to work together.
-            </p> */}
           </div>
         </header>
 
@@ -72,11 +69,7 @@ export default function ServicesOverview() {
               role="listitem"
               aria-label={title}
             >
-              {/* Icon tile */}
-              <div
-                className="serviceTile serviceTile--icon"
-                aria-hidden="true"
-              >
+              <div className="serviceTile serviceTile--icon" aria-hidden="true">
                 <img
                   src={icon}
                   alt=""
@@ -86,7 +79,6 @@ export default function ServicesOverview() {
                 />
               </div>
 
-              {/* Text tile */}
               <div className="serviceTile serviceTile--text">
                 <div className="serviceText">
                   <div className="serviceTitle">{title}</div>

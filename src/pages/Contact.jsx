@@ -1,11 +1,13 @@
 import { useState } from 'react'
 import './Contact.css'
 import mollyPhoto from '../assets/molly2.jpeg'
+import useScrollFade from '../hooks/useScrollFade'
 
 const Contact = () => {
     const [focused, setFocused] = useState(null)
     const [submitted, setSubmitted] = useState(false)
     const [error, setError] = useState(null)
+    const [ref, visible] = useScrollFade(0.05)
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -33,7 +35,10 @@ const Contact = () => {
 
     return (
         <section className="contact-section">
-            <div className="contact-inner">
+            <div
+                ref={ref}
+                className={`contact-inner fade-up ${visible ? 'is-visible' : ''}`}
+            >
 
                 {/* Left: Photo */}
                 <div className="contact-left">

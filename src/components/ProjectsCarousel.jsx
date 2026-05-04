@@ -1,12 +1,14 @@
 import { useRef } from "react";
 import { projectsData } from "../data/projectsData";
 import "./ProjectsCarousel.css";
+import useScrollFade from "../hooks/useScrollFade";
 
 export default function ProjectsCarousel({
   title = "Featured Projects",
   subtitle = "Selected Client Work.",
 }) {
   const trackRef = useRef(null);
+  const [ref, visible] = useScrollFade();
 
   const scrollByCard = (direction) => {
     const track = trackRef.current;
@@ -22,7 +24,10 @@ export default function ProjectsCarousel({
   };
 
   return (
-    <section className="pc">
+    <section
+      ref={ref}
+      className={`pc fade-up ${visible ? "is-visible" : ""}`}
+    >
       <div className="pc__container">
         <header className="pc__header">
           <div>
@@ -71,12 +76,6 @@ export default function ProjectsCarousel({
                 <h3 className="pc__cardTitle">{project.title}</h3>
                 <p className="pc__blurb">{project.blurb}</p>
 
-                {/* <ul className="pc__tags">
-                  {/* {project.tags.map((tag) => (
-                    <li key={tag} className="pc__tag">{tag}</li>
-                  ))}
-                </ul> */} 
-
                 <div className="pc__links">
                   <a
                     href={project.liveUrl}
@@ -86,14 +85,6 @@ export default function ProjectsCarousel({
                   >
                     Live Site
                   </a>
-                  {/* <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="pc__btn pc__btnSecondary"
-                  >
-                    GitHub
-                  </a> */}
                 </div>
               </div>
             </article>
