@@ -19,6 +19,7 @@
 :root {
     /* Colors */
     --primary-color: #8FA99B;
+    --primary-color-dark: #2A3D36;
     --text-color: #2F2F2F;
     --neutral-accent: #B8A89A;
     --accent-color: #99725F;

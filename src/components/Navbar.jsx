@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
-import logo from "../assets/logo-new-dark.png";
+import logo from "../assets/logo/sm-logo-dark-01.webp";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -26,12 +26,19 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop links */}
-        <ul className="navbar__list">
-          <li className="navbar__item"><Link to="/">Home</Link></li>
-          <li className="navbar__item"><Link to="/about">Our Story</Link></li>
-          <li className="navbar__item"><Link to="/services">Services</Link></li>
-          <li className="navbar__item"><Link to="/contact">Contact</Link></li>
-        </ul>
+<ul className="navbar__list">
+  <li className="navbar__item"><Link to="/">Home</Link></li>
+  <li className="navbar__item"><Link to="/about">About</Link></li>
+  <li className="navbar__item"><Link to="/services">Services</Link></li>
+  <li className="navbar__item"><Link to="/contact">Contact</Link></li>
+</ul>
+
+{/* Desktop CTA */}
+<Link to="/contact" className="navbar__cta-btn">Inquire Here</Link>
+
+        {/* <div className="navbar__cta-btn">
+          <Link to="/contact" className="cta-link">Get in Touch</Link>
+        </div> */}
 
         {/* Hamburger button */}
         <button
@@ -55,6 +62,7 @@ const Navbar = () => {
           <li><Link to="/contact">Contact</Link></li>
         </ul>
       </div>
+
 
       {/* Overlay */}
       {menuOpen && (

@@ -21,20 +21,18 @@ const About = () => {
           <p className="about-kicker">Studio Molly</p>
           <h1 className="about-title">Thoughtful websites for people doing meaningful work.</h1>
           <p className="about-lede">
-            I'm Molly, a web designer and front end developer creating calm, quietly beautiful sites for small
-            businesses, nonprofits, and weddings. I blend clean design with practical strategy so your site feels
-            easy to use, easy to trust, and easy to grow.
+            I'm Molly, a web designer and front end developer creating calm, quietly beautiful sites for nonprofits, mission-driven small businesses, and practitioners.
           </p>
           <div className="about-ctaRow">
             <a className="about-buttonPrimary" href="/contact">Work with me</a>
-            <a
+            {/* <a
               className="about-buttonSecondary"
               href="https://github.com/mckennamm"
               target="_blank"
               rel="noopener noreferrer"
             >
               View GitHub
-            </a>
+            </a> */}
           </div>
        
         </div>
@@ -107,8 +105,8 @@ Web design turned out to be the perfect fit. I love the intersection of aestheti
 
       {/* ── Skills ── */}
       <section className="about-section">
-        <span className="about-sectionLabel">Toolkit</span>
-        <h2 className="about-sectionTitle">Skills and tools</h2>
+        <span className="about-sectionLabel">How I build</span>
+<h2 className="about-sectionTitle">Built to last</h2>
         <div className="about-skillsGrid">
           <div className="about-skillGroup">
             <h3 className="about-skillTitle">Front end</h3>

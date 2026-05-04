@@ -119,8 +119,8 @@
 
 /* The icon itself */
 .serviceIcon {
-  width: 38px;
-  height: 38px;
+  width: 10px;
+  height: 10px;
   color: var(--text-color);
   opacity: 0.9;
 }

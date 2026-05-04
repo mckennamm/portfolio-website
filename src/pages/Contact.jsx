@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './Contact.css'
-import mollyPhoto from '../assets/molly4.jpeg'
+import mollyPhoto from '../assets/molly2.jpeg'
 
 const Contact = () => {
     const [focused, setFocused] = useState(null)
@@ -13,7 +13,7 @@ const Contact = () => {
         const form = e.target
 
         try {
-            const response = await fetch('https://formspree.io/f/maqdarbr', {  // ← replace xxxxxxxx with your Formspree ID
+            const response = await fetch('https://formspree.io/f/maqdarbr', {
                 method: 'POST',
                 body: new FormData(form),
                 headers: { 'Accept': 'application/json' }
@@ -35,10 +35,10 @@ const Contact = () => {
         <section className="contact-section">
             <div className="contact-inner">
 
-                {/* Left: Photo + caption */}
+                {/* Left: Photo */}
                 <div className="contact-left">
                     <div className="contact-photo-wrapper">
-                        <img src={mollyPhoto} alt="Molly" className="contact-photo" />  
+                        <img src={mollyPhoto} alt="Molly" className="contact-photo" />
                     </div>
                 </div>
 
@@ -46,9 +46,9 @@ const Contact = () => {
                 <div className="contact-right">
                     <div className="contact-header">
                         <span className="contact-label">Contact</span>
-                        <h2 className="contact-heading">Get In Touch</h2>
+                        <h2 className="contact-heading">Let's work together.</h2>
                         <p className="contact-subtext">
-                            Have a question or an idea? I'd love to hear from you. Fill out the form and I'll get back to you as soon as possible.
+                            Tell me a little about your project and I'll be in touch within 1–2 business days.
                         </p>
                     </div>
 
@@ -80,6 +80,27 @@ const Contact = () => {
                                 onFocus={() => setFocused('email')}
                                 onBlur={() => setFocused(null)}
                             />
+                            <span className="form-line" />
+                        </div>
+
+                        <div className={`form-group ${focused === 'project' ? 'is-focused' : ''}`}>
+                            <label htmlFor="project" className="form-label">What are you looking for?</label>
+                            <select
+                                id="project"
+                                name="project"
+                                className="form-input form-select"
+                                required
+                                onFocus={() => setFocused('project')}
+                                onBlur={() => setFocused(null)}
+                                defaultValue=""
+                            >
+                                <option value="" disabled>Select a service...</option>
+                                <option value="starter">Starter — from $2,500</option>
+                                <option value="studio">Studio — from $5,500</option>
+                                <option value="signature">Signature — from $10,000</option>
+                                <option value="illustration">Brand identity / illustration add-on</option>
+                                <option value="unsure">Not sure yet</option>
+                            </select>
                             <span className="form-line" />
                         </div>
 

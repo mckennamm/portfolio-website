@@ -8,31 +8,32 @@ import webDesignIcon from "../assets/web-design-icon.svg";
 import frontendDevIcon from "../assets/frontend-dev-icon.svg";
 import brandDirectionIcon from "../assets/brand-direction-icon.svg";
 import visualIdentityIcon from "../assets/visual-identity-icon.svg";
+import ginkgoLeaf from "../assets/ginkgo-leaf-01.webp";
 
 const services = [
   {
     title: "Web Design",
     to: "/services#web-design",
     subtitle: "Custom website design and user experience",
-    icon: webDesignIcon,
+    icon: ginkgoLeaf,
   },
   {
     title: "Front-End Development",
     to: "/services#front-end-development",
     subtitle: "HTML, CSS, JavaScript, and React",
-    icon: frontendDevIcon,
+    icon: ginkgoLeaf,
   },
     {
     title: "Brand Direction",
     to: "/services#brand-direction",
     subtitle: "Messaging, positioning, and strategy",
-    icon: brandDirectionIcon,
+    icon: ginkgoLeaf,
   },
   {
     title: "Visual Identity",
     to: "/services#visual-identity",
     subtitle: "Marks, icons, and hand-drawn elements",
-    icon: visualIdentityIcon,
+    icon: ginkgoLeaf,
   },
 ];
 

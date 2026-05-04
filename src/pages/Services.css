@@ -351,6 +351,107 @@
     border-color: rgba(255,255,255,0.88);
 }
 
+
+/* ── Pricing Tiers ── */
+.servicesTiers {
+  background: var(--neutral-light);
+  padding: 5rem 2.5rem;
+}
+
+.servicesTiers__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.servicesTiers__intro {
+  font-family: var(--font-family-body);
+  font-size: 0.97rem;
+  color: #666;
+  line-height: 1.8;
+  max-width: 60ch;
+  margin: 0 0 3rem;
+  font-weight: 300;
+}
+
+.tiersGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+  align-items: stretch;
+}
+
+.tierCard {
+  background: #fff;
+  border: 1px solid rgba(47, 47, 47, 0.08);
+  border-top: 3px solid var(--primary-color);
+  border-radius: 1rem;
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+
+}
+
+.tierCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.07);
+}
+
+.tierCard--featured {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.tierCard--featured .tierCard__name,
+.tierCard--featured .tierCard__price,
+.tierCard--featured .tierCard__desc {
+  color: #fff;
+}
+
+.tierCard__name {
+  font-family: var(--font-family-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #888;
+  margin: 0;
+}
+
+.tierCard__price {
+  font-family: var(--font-family-heading);
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.tierCard__desc {
+  font-family: var(--font-family-body);
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: #666;
+  margin: 0;
+  font-weight: 300;
+}
+
+.servicesTiers__note {
+  font-family: var(--font-family-body);
+  font-size: 0.9rem;
+  color: #888;
+  line-height: 1.6;
+}
+
+.servicesTiers__note a {
+  color: var(--text-color);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+
 /* ─────────────────────────────────────────
    Responsive
    ───────────────────────────────────────── */
@@ -393,3 +494,5 @@
         padding-bottom: 2.5rem;
     }
 }
+
+

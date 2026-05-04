@@ -105,6 +105,49 @@ export default function Services() {
         />
       </div>
 
+      {/* Pricing Tiers */}
+      <section className="servicesTiers" aria-labelledby="tiers-title">
+        <div className="servicesTiers__inner">
+          <span className="services__sectionLabel">Investment</span>
+          <h2 className="services__sectionTitle" id="tiers-title">
+            What to expect
+          </h2>
+          <p className="servicesTiers__intro">
+            Every project is scoped individually, but here's a starting point so you know what to expect before reaching out.
+          </p>
+
+          <div className="tiersGrid">
+            <article className="tierCard">
+              <p className="tierCard__name">Starter</p>
+              <p className="tierCard__price">From $2,500</p>
+              <p className="tierCard__desc">
+                Template customization on Squarespace or WordPress. Great for organizations that need a clean, professional presence quickly.
+              </p>
+            </article>
+
+            <article className="tierCard">
+              <p className="tierCard__name">Studio</p>
+              <p className="tierCard__price">From $5,500</p>
+              <p className="tierCard__desc">
+                Custom WordPress build with brand direction and visual design. A fully considered site built around your organization's needs.
+              </p>
+            </article>
+
+            <article className="tierCard">
+              <p className="tierCard__name">Signature</p>
+              <p className="tierCard__price">From $10,000</p>
+              <p className="tierCard__desc">
+                Custom React + Sanity CMS. For organizations ready for a fully bespoke site with a content system built for long-term growth.
+              </p>
+            </article>
+          </div>
+
+          <p className="servicesTiers__note">
+            Brand identity and custom illustration available as add-ons from $1,500. Not sure which tier fits? <Link to="/contact">Let's talk.</Link>
+          </p>
+        </div>
+      </section>
+
       {/* Process */}
       <section className="servicesProcess" aria-labelledby="process-title">
         <div className="servicesProcess__inner">
@@ -143,7 +186,7 @@ export default function Services() {
           <h2 className="servicesCta__title" id="cta-title">
             Ready to build something?
           </h2>
-           <p className="servicesCta__text">
+          <p className="servicesCta__text">
             Have a project in mind? I'd love to hear about it!
           </p>
           <Link className="btnPrimary" to="/contact">Get in touch</Link>

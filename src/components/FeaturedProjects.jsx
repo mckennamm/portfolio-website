@@ -8,7 +8,7 @@ export default function FeaturedProjects() {
       <div className="container">
         <header className="sectionHeader">
           <h2 id="projects-heading">Featured Projects</h2>
-          <p className="muted">A few recent builds and experiments.</p>
+          <p className="muted">Selected client work:</p>
         </header>
 
         <div className="grid3">

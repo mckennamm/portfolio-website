@@ -4,7 +4,7 @@ import "./ProjectsCarousel.css";
 
 export default function ProjectsCarousel({
   title = "Featured Projects",
-  subtitle = "A few recent builds and experiments.",
+  subtitle = "Selected Client Work.",
 }) {
   const trackRef = useRef(null);
 
@@ -86,14 +86,14 @@ export default function ProjectsCarousel({
                   >
                     Live Site
                   </a>
-                  <a
+                  {/* <a
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="pc__btn pc__btnSecondary"
                   >
                     GitHub
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </article>

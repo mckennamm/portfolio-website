@@ -22,12 +22,12 @@
 
 /* ── Brand / logo ── */
 .footer-brand {
-    display: flex;
+    display: flex; 
     align-items: flex-start;
 }
 
 .footer-logo {
-    height: 200px;
+    height: 120px;
     width: auto;
     object-fit: contain;
 }
