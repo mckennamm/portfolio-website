@@ -451,6 +451,256 @@
   text-underline-offset: 3px;
 }
 
+/* ─────────────────────────────────────────
+   Tier card includes list
+   ───────────────────────────────────────── */
+.tierCard__plan {
+  font-family: var(--font-family-body);
+  font-size: 0.78rem;
+  color: var(--primary-color);
+  font-weight: 500;
+  margin: 0;
+}
+
+.tierCard__includes {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  border-top: 0.5px solid rgba(47,47,47,0.08);
+  padding-top: 0.75rem;
+}
+
+.tierCard__includes li {
+  font-family: var(--font-family-body);
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 300;
+  padding-left: 1rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.tierCard__includes li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--primary-color);
+}
+
+/* ─────────────────────────────────────────
+   Add-ons section
+   ───────────────────────────────────────── */
+.servicesAddons {
+  background: #fff;
+  border-top: 1px solid rgba(47,47,47,0.08);
+  border-bottom: 1px solid rgba(47,47,47,0.08);
+  padding: 5rem 2.5rem;
+}
+
+.servicesAddons__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ─────────────────────────────────────────
+   Accordion
+   ───────────────────────────────────────── */
+.addonAccordion {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.addonGroup {
+  border: 0.5px solid rgba(47,47,47,0.1);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: var(--neutral-light);
+}
+
+.addonGroup__trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-family-body);
+  transition: background-color 0.2s ease;
+}
+
+.addonGroup__trigger:hover {
+  background-color: rgba(143,169,155,0.08);
+}
+
+.addonGroup__emoji {
+  font-size: 14px;
+  width: 28px;
+  height: 28px;
+  background: rgba(143,169,155,0.15);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.addonGroup__name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-color);
+  flex: 1;
+}
+
+.addonGroup__count {
+  font-size: 12px;
+  color: #888;
+}
+
+.addonGroup__chevron {
+  font-size: 18px;
+  color: var(--primary-color);
+  font-weight: 300;
+  width: 24px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.addonGroup__body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.addonGroup.is-open .addonGroup__body {
+  max-height: 600px;
+}
+
+.addonList {
+  list-style: none;
+  padding: 0 1.25rem 1rem;
+  margin: 0;
+  border-top: 0.5px solid rgba(47,47,47,0.08);
+}
+
+.addonItem {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 0.6rem 0;
+  border-bottom: 0.5px solid rgba(47,47,47,0.06);
+}
+
+.addonItem:last-child {
+  border-bottom: none;
+}
+
+.addonItem__name {
+  font-family: var(--font-family-body);
+  font-size: 13px;
+  color: var(--text-color);
+  font-weight: 400;
+}
+
+.addonItem__note {
+  font-family: var(--font-family-body);
+  font-size: 11px;
+  color: #aaa;
+  font-style: italic;
+  white-space: nowrap;
+}
+
+.addonItem__price {
+  font-family: var(--font-family-body);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-color);
+  white-space: nowrap;
+}
+
+/* ─────────────────────────────────────────
+   Services intro pillars
+   ───────────────────────────────────────── */
+.servicesIntro {
+  padding: 5rem 2.5rem 4rem;
+  background: var(--neutral-light);
+}
+
+.servicesIntro__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.servicePillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: rgba(47, 47, 47, 0.08);
+  border: 1px solid rgba(47, 47, 47, 0.08);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.servicePillar {
+  background: #fff;
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: background-color 0.2s ease;
+}
+
+.servicePillar:hover {
+  background: rgba(143, 169, 155, 0.06);
+}
+
+.servicePillar__number {
+  font-family: var(--font-family-heading);
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: rgba(143, 169, 155, 0.6);
+  line-height: 1;
+}
+
+.servicePillar__title {
+  font-family: var(--font-family-heading);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--text-color);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.servicePillar__tagline {
+  font-family: var(--font-family-body);
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: #666;
+  font-weight: 300;
+  margin: 0;
+}
+
+@media (max-width: 680px) {
+  .servicePillars {
+    grid-template-columns: 1fr;
+  }
+
+  .servicesIntro {
+    padding: 3rem 1.5rem 2.5rem;
+  }
+}
+
 
 /* ─────────────────────────────────────────
    Responsive
