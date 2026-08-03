@@ -3,7 +3,7 @@ import binkleyPhoto from "../assets/binkleyphoto.png";
 import rcbPhoto from "../assets/rcb.png";
 import smPhoto from "../assets/studioMolly2.png"
 import bardchirpPhoto from "../assets/bardchirp-project.png";
-import hfhPhoto from "../assets/HFHPhoto.png";
+import hfhPhoto from "../assets/HFHphoto.png";
 
 export const projectsData = [
   {
