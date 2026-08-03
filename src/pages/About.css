@@ -32,6 +32,7 @@
     padding: 6rem 2.5rem 5rem;
     max-width: 1100px;
     margin: 0 auto;
+
 }
 
 .about-photoLink {
@@ -170,8 +171,8 @@
    Shared Section styles
    ───────────────────────────────────────── */
 .about-section {
-    padding: 4.5rem 2.5rem;
-    max-width: 1100px;
+    padding: 3.5rem 1.5rem;
+    max-width: 2000px;
     margin: 0 auto;
 }
 
@@ -250,6 +251,69 @@
     color: #666;
     margin: 0;
     font-weight: 300;
+}
+
+/* ─────────────────────────────────────────
+   Editorial Layout
+   ───────────────────────────────────────── */
+.about-editorial {
+  padding: 0;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.about-editorialRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  align-items: stretch;
+  border-top: 1px solid rgba(47, 47, 47, 0.08);
+  min-height: 500px;
+}
+
+.about-editorialRow--reverse .about-editorialImage {
+  order: -1;
+}
+
+.about-editorialText {
+  padding: 5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-editorialImage {
+  overflow: hidden;
+}
+
+.about-editorialImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.about-editorialImage:hover img {
+  transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+  .about-editorialRow {
+    grid-template-columns: 1fr;
+  }
+
+  .about-editorialRow--reverse .about-editorialImage {
+    order: 0;
+  }
+
+  .about-editorialImage {
+    height: 300px;
+  }
+
+  .about-editorialText {
+    padding: 3rem 1.5rem;
+  }
 }
 
 /* ─────────────────────────────────────────
@@ -344,17 +408,19 @@
    CTA
    ───────────────────────────────────────── */
 .about-cta {
-    background: var(--text-color);
+    background: var(--primary-color);
     border-radius: 1.25rem;
     padding: 3.5rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    align-items: flex-start;
+    align-items: center;
+    max-width: 100%;
+
 }
 
 .about-cta .about-sectionTitle {
-    color: #fff;
+    color: var(--text-color);;
     margin-bottom: 0.25rem;
 }
 

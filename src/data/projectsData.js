@@ -1,8 +1,9 @@
 // src/data/projectsData.js
 import binkleyPhoto from "../assets/binkleyphoto.png";
 import rcbPhoto from "../assets/rcb.png";
-import smPhoto from "../assets/smPhoto.png"
+import smPhoto from "../assets/studioMolly2.png"
 import bardchirpPhoto from "../assets/bardchirp-project.png";
+import hfhPhoto from "../assets/HFHPhoto.png";
 
 export const projectsData = [
   {
@@ -30,8 +31,21 @@ export const projectsData = [
     liveUrl: "https://www.thercb.org",
     githubUrl: "#",
   },
-  {
+    {
     id: "project-3",
+    title: "Nonprofit Website Design",
+    role: "Custom React Design + Development",
+    blurb:
+      "A modern, minimal site built for conversion with clear calls to action and clean layout structure.",
+    tags: ["UX", "Conversion", "Vite"],
+    thumbnail:
+     hfhPhoto,
+    thumbnailAlt: "Website design preview",
+    liveUrl: "https://studiomolly.co",
+    githubUrl: "#",
+  },
+  {
+    id: "project-4",
     title: "Studio Molly Redesign",
     role: "Custom React Design + Development",
     blurb:
@@ -43,7 +57,7 @@ export const projectsData = [
     githubUrl: "#",
   },
   {
-    id: "project-4",
+    id: "project-5",
     title: "BardChirp",
     role: "UI + Firebase Integration",
     blurb:

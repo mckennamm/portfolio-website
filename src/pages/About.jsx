@@ -1,11 +1,13 @@
 import "./About.css";
-import molly from "../assets/molly2.jpeg";
+import molly from "../assets/molly4.jpeg";
+import laptop from "../assets/laptopPhoto.webp";
+import ipad from "../assets/ipadPhoto.jpg";
 import useScrollFade from "../hooks/useScrollFade";
+import { Link } from "react-router-dom";
 
 const About = () => {
-  const [servicesRef, servicesVisible] = useScrollFade();
-  const [approachRef, approachVisible] = useScrollFade();
-  const [skillsRef, skillsVisible] = useScrollFade();
+  const [storyRef, storyVisible] = useScrollFade();
+  const [whyRef, whyVisible] = useScrollFade();
   const [ctaRef, ctaVisible] = useScrollFade();
 
   return (
@@ -25,109 +27,82 @@ const About = () => {
 
         <div className="about-heroContent">
           <p className="about-kicker">Studio Molly</p>
-          <h1 className="about-title">Thoughtful websites for people doing meaningful work.</h1>
+          <h1 className="about-title">Artist at heart, developer by craft, and invested in every detail.</h1>
           <p className="about-lede">
-            I'm Molly, a web designer and front end developer creating calm, quietly beautiful sites for nonprofits, mission-driven small businesses, and practitioners.
+            I'm Molly, a web designer and developer who builds calm, quietly beautiful sites for nonprofits, mission-driven small businesses, and the people behind them.
           </p>
           <div className="about-ctaRow">
-            <a className="about-buttonPrimary" href="/contact">Work with me</a>
+            <Link className="about-buttonPrimary" to="/contact">Work with me</Link>
           </div>
         </div>
       </section>
 
       <div className="about-divider" />
 
-      {/* ── Services ── */}
+      {/* ── My Story ── */}
       <section
-        ref={servicesRef}
-        className={`about-section fade-up ${servicesVisible ? "is-visible" : ""}`}
+        ref={storyRef}
+        className={`about-section fade-up ${storyVisible ? "is-visible" : ""}`}
       >
-        <span className="about-sectionLabel">Services</span>
-        <h2 className="about-sectionTitle">What I help with</h2>
-        <div className="about-cards">
-          <article className="about-card">
-            <p className="about-cardNumber">01</p>
-            <h3 className="about-cardTitle">Website design</h3>
-            <p className="about-cardText">
-              Structure, layout, visual direction, and a clean experience that feels like your brand and guides
-              people where you want them to go.
+        <span className="about-sectionLabel">My story</span>
+        <h2 className="about-sectionTitle">How I got here</h2>
+        <p className="about-text">
+          I've always been an artist at heart. As a little girl, I was endlessly redesigning the world around me — sketching room layouts, moving furniture around just to see how the light would fall differently, chasing that feeling of a space that finally felt <em>right</em>.
+        </p>
+        <p className="about-text">
+          Somewhere along the way, the world convinced me that a life built around beauty and creativity wasn't practical. So I redirected. I wove my way through college and graduate school, collecting degrees in Outdoor Wilderness Therapy, Psychology, and Parks, Recreation, and Tourism Management — drawn to the texture of human connection, the quiet satisfaction of helping people find their footing. I loved the work. But something still felt unfinished.
+        </p>
+        <p className="about-text">
+          When I finally stepped away, I gave myself permission to go looking for it. I spent a year learning to code and design, and something clicked into place almost immediately. Web design turned out to be the thing I didn't know I'd been moving toward all along — a world where aesthetics and logic live side by side, where a well-placed element can guide someone exactly where they need to go, where creativity and care for real people are not just welcome but essential.
+        </p>
+        {/* <p className="about-text">I haven't looked back since.</p> */}
+      </section>
+
+      {/* ── Editorial Layout ── */}
+      <section
+        ref={whyRef}
+        className={`about-editorial fade-up ${whyVisible ? "is-visible" : ""}`}
+      >
+        <div className="about-editorialRow">
+          <div className="about-editorialText">
+            <span className="about-sectionLabel">My clients</span>
+            <h2 className="about-sectionTitle">Who I build for</h2>
+            <p className="about-text">
+              I didn't stumble into working with nonprofits and small businesses by accident. Nonprofits are my background, and they have a permanent place in my heart. I know firsthand how hard these organizations work for the people and communities they serve — and I know a strong online presence can make a real difference in their ability to do that work.
             </p>
-          </article>
-          <article className="about-card">
-            <p className="about-cardNumber">02</p>
-            <h3 className="about-cardTitle">Front end development</h3>
-            <p className="about-cardText">
-              Responsive builds with thoughtful details, solid performance, and components you can actually reuse.
+            <p className="about-text">
+              Small businesses are something I feel just as strongly about. I believe they're the lifeblood of this country and its promise of opportunity, and I want to do my part to help that flourish.
             </p>
-          </article>
-          <article className="about-card">
-            <p className="about-cardNumber">03</p>
-            <h3 className="about-cardTitle">Content support</h3>
-            <p className="about-cardText">
-              Light copy shaping, page flow, and editing support so you do not have to figure it out alone.
+            <p className="about-text">
+              When you work with me, you're not just getting a website. You're getting someone who's genuinely invested in what you're building.
             </p>
-          </article>
+          </div>
+          <div className="about-editorialImage">
+            <img src={laptop} alt="Laptop showing Studio Molly work with dried botanicals" />
+          </div>
+        </div>
+
+        <div className="about-editorialRow about-editorialRow--reverse">
+          <div className="about-editorialImage">
+            <img src={ipad} alt="iPad and sketchbook with dried botanicals on a wooden desk" />
+          </div>
+          <div className="about-editorialText">
+            <span className="about-sectionLabel">How I work</span>
+            <h2 className="about-sectionTitle">What it's like to work with me</h2>
+            <p className="about-text">
+              I don't just design from the outside in. When I take on a project, I temporarily become part of your team — looking at every decision through the lens of your mission, your audience, and your goals. Not just through the lens of what looks good.
+            </p>
+            <p className="about-text">
+              Working with me feels like being taken care of. Like your needs were not just met but predicted. Like you were working with a friend who happened to be really good at websites.
+            </p>
+            <p className="about-text">
+              By the end, I want you to feel like something huge just got checked off your list — and that you have something to show for it that you're genuinely proud of.
+            </p>
+          </div>
         </div>
       </section>
 
       <div className="about-divider" />
-
-      {/* ── Approach + Story ── */}
-      <section
-        ref={approachRef}
-        className={`about-section about-split fade-up ${approachVisible ? "is-visible" : ""}`}
-      >
-        <div>
-          <span className="about-sectionLabel">Process</span>
-          <h2 className="about-sectionTitle">My approach</h2>
-          <p className="about-text">
-            I design with empathy and intention. I want your site to feel human, not templated. That means clear
-            hierarchy, strong usability, and a visual style that supports the story you are telling.
-          </p>
-          <ul className="about-bullets">
-            <li>Start with goals, audience, and page flow</li>
-            <li>Design a calm, clear system you can build on</li>
-            <li>Build responsive, accessible components</li>
-            <li>Launch with confidence and a plan for updates</li>
-          </ul>
-        </div>
-
-        <div className="about-note">
-          <h3 className="about-noteTitle">A bit of my story</h3>
-          <p className="about-text">
-            My path here wasn't linear; I spent years in youth development and recreation before realizing I was ready for a change.
-            <br/><br/>
-            I wanted to get back to my creative roots and build something of my own.
-            <br/><br/>
-            Web design turned out to be the perfect fit. I love the intersection of aesthetics and problem-solving, and front end development gave me a way to be both an artist and a builder. I took the leap, learned fast, and haven't looked back.
-          </p>
-        </div>
-      </section>
-
-      <div className="about-divider" />
-
-      {/* ── Skills ── */}
-      <section
-        ref={skillsRef}
-        className={`about-section fade-up ${skillsVisible ? "is-visible" : ""}`}
-      >
-        <span className="about-sectionLabel">How I build</span>
-        <h2 className="about-sectionTitle">Built to last</h2>
-        <div className="about-skillsGrid">
-          <div className="about-skillGroup">
-            <h3 className="about-skillTitle">Front end</h3>
-            <p className="about-skillText">HTML, CSS, JavaScript, React, Redux, Vite, Tailwind, Bootstrap</p>
-          </div>
-          <div className="about-skillGroup">
-            <h3 className="about-skillTitle">Collaboration</h3>
-            <p className="about-skillText">Git, GitHub, component libraries, handoff-ready design systems</p>
-          </div>
-          <div className="about-skillGroup">
-            <h3 className="about-skillTitle">Tools and backend</h3>
-            <p className="about-skillText">Firebase, Node basics, Vercel deployments</p>
-          </div>
-        </div>
-      </section>
 
       {/* ── CTA ── */}
       <section
@@ -136,10 +111,8 @@ const About = () => {
       >
         <div className="about-cta">
           <h2 className="about-sectionTitle">Ready to build something that feels like you?</h2>
-          <p className="about-text">
-            If you want a site that is clean, modern, and quietly you, I would love to hear what you are working on.
-          </p>
-          <a className="about-buttonPrimary" href="/contact">Reach out</a>
+          
+          <Link className="about-buttonPrimary" to="/contact">Reach out</Link>
         </div>
       </section>
 

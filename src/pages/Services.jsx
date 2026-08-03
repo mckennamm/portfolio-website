@@ -25,34 +25,30 @@ const addons = [
       { name: "Tagline development", price: "from $250", note: "3 options + rationale" },
       { name: "SEO keyword research", price: "from $300", note: "priority keyword list" },
       { name: "On-page SEO optimization", price: "from $350", note: "meta, headings, alt text" },
-      { name: "Content strategy session", price: "$275", note: "90 min + action plan" },
-      { name: "Photo sourcing / curation", price: "from $150", note: "licensed stock selection" },
+      { name: "Custom photography", price: "from $500", note: "photography session" },
     ],
   },
   {
     category: "Technical",
     emoji: "⚙",
     items: [
-      { name: "Custom contact / intake form", price: "from $300", note: "logic + email routing" },
-      { name: "Hosting setup + configuration", price: "from $200", note: "incl. SSL + DNS" },
       { name: "Analytics + tracking setup", price: "from $200", note: "GA4 + Search Console" },
-      { name: "Legal setup (cookie + privacy)", price: "from $250", note: "policy + banner" },
       { name: "Extra pages beyond package", price: "$175/page", note: "designed + built" },
       { name: "Media / podcast page", price: "from $400", note: "player + archive" },
       { name: "Event calendar integration", price: "from $350", note: "recurring events support" },
       { name: "Donation page / integration", price: "from $500", note: "Stripe or Donorbox" },
     ],
   },
-  {
-    category: "Ongoing",
-    emoji: "↻",
-    items: [
-      { name: "Care Plan (maintenance + priority support)", price: "$150/mo", note: "min 3 months" },
-      { name: "Monthly content updates", price: "$200/mo", note: "up to 2hrs/month" },
-      { name: "Quarterly site audit", price: "$350/quarter", note: "performance + content review" },
-      { name: "Annual refresh", price: "from $800", note: "design + content update" },
-    ],
-  },
+  // {
+  //   category: "Ongoing",
+  //   emoji: "↻",
+  //   items: [
+  //     { name: "Care Plan (maintenance + priority support)", price: "$150/mo", note: "min 3 months" },
+  //     { name: "Monthly content updates", price: "$200/mo", note: "up to 2hrs/month" },
+  //     { name: "Quarterly site audit", price: "$350/quarter", note: "performance + content review" },
+  //     { name: "Annual refresh", price: "from $800", note: "design + content update" },
+  //   ],
+  // },
 ];
 
 function AddonAccordion() {
@@ -126,7 +122,7 @@ export default function Services() {
       </header>
 
       {/* Services intro */}
-      <section
+      {/* <section
         ref={introRef}
         className={`servicesIntro fade-up ${introVisible ? "is-visible" : ""}`}
         aria-labelledby="services-intro-title"
@@ -137,16 +133,18 @@ export default function Services() {
             A focused set of services
           </h2>
           <div className="servicePillars">
-            <ServicePillar
+                        <ServicePillar
               number="01"
-              title="Brand Identity"
-              tagline="Who you are and how you look — the details that make you recognizable."
-            />
-            <ServicePillar
-              number="02"
               title="Web Design"
               tagline="Custom websites that actually reflect who you are."
             />
+            
+            <ServicePillar
+              number="02"
+              title="Brand Identity"
+              tagline="Who you are and how you look — the details that make you recognizable."
+            />
+
             <ServicePillar
               number="03"
               title="Illustration"
@@ -154,7 +152,7 @@ export default function Services() {
             />
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Pricing Tiers */}
       <section
@@ -163,67 +161,46 @@ export default function Services() {
         aria-labelledby="tiers-title"
       >
         <div className="servicesTiers__inner">
-          <span className="services__sectionLabel">Investment</span>
+          <span className="services__sectionLabel">Studio Molly Offerings</span>
           <h2 className="services__sectionTitle" id="tiers-title">
-            Choose your starting point
+            Two ways to work together
           </h2>
           <p className="servicesTiers__intro">
-            Every project is scoped individually, but here's a starting point so you know what to expect before reaching out. All packages available as a lump sum or monthly payment plan.
+            Not sure which is right for you? Here's a simple way to think about it: if you want to be able to update your site yourself, Essentials is your fit. If you want a fully custom experience with someone in your corner long-term, Signature is for you.
           </p>
 
           <div className="tiersGrid">
             <article className="tierCard">
               <p className="tierCard__name">Essential</p>
               <p className="tierCard__price">From $3,000</p>
-              <p className="tierCard__plan">or $300/mo × 10 months</p>
-              <p className="tierCard__desc">A clean, professional presence for organizations that need to look credible fast.</p>
+              <p className="tierCard__desc">A clean, professional presence for organizations that need to look credible fast, with a real person guiding you through every decision.</p>
               <ul className="tierCard__includes">
-                <li>Custom design</li>
-                <li>Up to 5 pages</li>
-                <li>Squarespace or WordPress</li>
-                <li>Mobile responsive</li>
-                <li>Contact form</li>
-                <li>Domain setup</li>
-                <li>Launch support</li>
-              </ul>
-            </article>
-
-            <article className="tierCard">
-              <p className="tierCard__name">Studio</p>
-              <p className="tierCard__price">From $5,500</p>
-              <p className="tierCard__plan">or $520/mo × 12 months</p>
-              <p className="tierCard__desc">A fully considered custom site built around your organization's specific needs.</p>
-              <ul className="tierCard__includes">
-                <li>Custom design system</li>
-                <li>Up to 8 pages</li>
-                <li>React or WordPress</li>
-                <li>Basic CMS integration</li>
-                <li>Accessibility review</li>
-                <li>Domain setup</li>
-                <li>2 rounds of revisions</li>
-                <li>Launch + handoff</li>
+                <li>Quick turnaround</li>
+                <li>Less decisions, less stress</li>
+                <li>You own and manage it yourself</li>
+                <li>A more accessible starting point</li>
               </ul>
             </article>
 
             <article className="tierCard">
               <p className="tierCard__name">Signature</p>
-              <p className="tierCard__price">From $7,500</p>
-              <p className="tierCard__plan">or $720/mo × 12 months</p>
-              <p className="tierCard__desc">A fully bespoke site with a content system built for long-term growth.</p>
+              <p className="tierCard__price">From $5,500</p>
+              <p className="tierCard__desc">For professionals and organizations that want more than a template. A fully custom site built around exactly who you are with someone who's as invested in your mission as you are.</p>
               <ul className="tierCard__includes">
-                <li>Full custom React build</li>
-                <li>Unlimited pages</li>
-                <li>Sanity CMS architecture</li>
-                <li>Custom animations</li>
-                <li>Full accessibility audit</li>
-                <li>Domain setup</li>
-                <li>3 rounds of revisions</li>
-                <li>CMS training session</li>
-                <li>30-day post-launch support</li>
+                <li>Hands-on, collaborative design experience</li>
+                <li>Built uniquely around your brand</li>
+                <li>More flexibility and design detail</li>
+                <li>Your vision, fully realized</li>
               </ul>
             </article>
           </div>
+          <div className="servicesTiers__note">
+          <h3>Ongoing Support</h3>
+          <p>Every site deserves care after launch. For <b>Signature</b> clients, a Care Plan at $150/mo is required, covering hosting, maintenance, and priority support to keep your custom site running at its best. <b>Essentials</b> clients can add an optional Care Plan at $75/mo for ongoing maintenance and peace of mind.</p>
+
         </div>
+        </div>
+
       </section>
 
       {/* Add-ons */}
@@ -233,12 +210,12 @@ export default function Services() {
         aria-labelledby="addons-title"
       >
         <div className="servicesAddons__inner">
-          <span className="services__sectionLabel">Add-ons</span>
+          <span className="services__sectionLabel">A la carte</span>
           <h2 className="services__sectionTitle" id="addons-title">
             Customize your package
           </h2>
           <p className="servicesTiers__intro">
-            Every package can be tailored with add-ons. Mix and match from the categories below — or ask me to bundle something specific for your project.
+            Every package can be tailored with add-ons. Mix and match from the categories below, or ask me to bundle something specific for your project.
           </p>
           <AddonAccordion />
           <p className="servicesTiers__note" style={{ marginTop: "1.5rem" }}>
@@ -266,7 +243,7 @@ export default function Services() {
             </li>
             <li className="processStep">
               <span className="processStep__number">02</span>
-              <strong className="processStep__title">Direction + design</strong>
+              <strong className="processStep__title">Design</strong>
               <span className="processStep__text">We shape the look, structure, and content priorities.</span>
             </li>
             <li className="processStep">
@@ -276,8 +253,8 @@ export default function Services() {
             </li>
             <li className="processStep">
               <span className="processStep__number">04</span>
-              <strong className="processStep__title">Launch + handoff</strong>
-              <span className="processStep__text">You get a site you can live with and maintain confidently.</span>
+              <strong className="processStep__title">Launch</strong>
+              <span className="processStep__text">You get a site that's ready for the world, with support to match.</span>
             </li>
           </ol>
         </div>
