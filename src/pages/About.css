@@ -37,7 +37,6 @@
 
 .about-photoLink {
     display: block;
-    border-radius: var(--radius, 1.25rem);
     overflow: hidden;
     box-shadow: 0 24px 60px rgba(0, 0, 0, 0.1);
 }
@@ -174,6 +173,7 @@
     padding: 3.5rem 1.5rem;
     max-width: 2000px;
     margin: 0 auto;
+    margin-bottom: 5rem;
 }
 
 .about-sectionLabel {

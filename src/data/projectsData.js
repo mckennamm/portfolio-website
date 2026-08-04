@@ -33,7 +33,7 @@ export const projectsData = [
   },
     {
     id: "project-3",
-    title: "Nonprofit Website Design",
+    title: "IN PROGRESS: Nonprofit Website Design",
     role: "Custom React Design + Development",
     blurb:
       "A modern, minimal site built for conversion with clear calls to action and clean layout structure.",
@@ -56,17 +56,17 @@ export const projectsData = [
     liveUrl: "https://studiomolly.co",
     githubUrl: "#",
   },
-  {
-    id: "project-5",
-    title: "BardChirp",
-    role: "UI + Firebase Integration",
-    blurb:
-      "A small-scale social platform concept for a Dungeons and Dragons campaign.",
-    tags: ["Firebase", "Auth", "UI"],
-    thumbnail:
-     bardchirpPhoto,
-    thumbnailAlt: "App interface preview",
-    liveUrl: "https://www.bardchirp.com/",
-    githubUrl: "#",
-  },
+  // {
+  //   id: "project-5",
+  //   title: "BardChirp",
+  //   role: "UI + Firebase Integration",
+  //   blurb:
+  //     "A small-scale social platform concept for a Dungeons and Dragons campaign.",
+  //   tags: ["Firebase", "Auth", "UI"],
+  //   thumbnail:
+  //    bardchirpPhoto,
+  //   thumbnailAlt: "App interface preview",
+  //   liveUrl: "https://www.bardchirp.com/",
+  //   githubUrl: "#",
+  // },
 ];
